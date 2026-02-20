@@ -1,0 +1,292 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout
+    title="Support - NotarIA"
+    description="NotarIA Help Center. Find answers to frequently asked questions about recording, transcription, subscriptions, and more."
+    pagePath="/support"
+>
+    <section class="pt-32 pb-20 px-6 bg-gray-50 min-h-screen">
+        <div class="max-w-4xl mx-auto">
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+                    NotarIA - Support
+                </h1>
+            </div>
+
+            <!-- What is NotarIA -->
+            <div class="bg-white rounded-2xl border border-gray-200 p-8 mb-8 shadow-sm">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">What is NotarIA?</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    NotarIA is an AI-powered meeting recording application. Record your meetings, get automatic transcriptions with speaker identification, AI-generated summaries, and extract action items effortlessly.
+                </p>
+            </div>
+
+            <!-- Contact -->
+            <div class="bg-white rounded-2xl border border-gray-200 p-8 mb-8 shadow-sm">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Contact</h2>
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <span class="text-gray-500 w-40">Email:</span>
+                        <a href="mailto:support@ravencorex.com" class="text-[#92600a] hover:underline font-medium">
+                            support@ravencorex.com
+                        </a>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-gray-500 w-40">Developer:</span>
+                        <span class="text-gray-900 font-medium">RavencoreX</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="text-gray-500 w-40">Response time:</span>
+                        <span class="text-gray-900">24-48 business hours</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="bg-white rounded-2xl border border-gray-200 p-8 mb-8 shadow-sm">
+                <h2 class="text-2xl font-bold text-gray-900 mb-8">Frequently Asked Questions</h2>
+
+                <!-- Recording -->
+                <div class="mb-10">
+                    <h3 class="text-lg font-semibold text-[#92600a] mb-4 pb-2 border-b border-gray-100">Recording</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-2">How do I record a meeting?</h4>
+                            <p class="text-gray-600">Open the app, go to the "Record" tab, select the meeting language, and press the red microphone button.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-2">Why does it need microphone permission?</h4>
+                            <p class="text-gray-600">To capture the audio from your meetings. Without this permission, the app cannot record.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-2">How long can I record?</h4>
+                            <p class="text-gray-600">Depends on your plan: Free (10 min), Starter (15 min), Pro (60 min), Plus and Business (unlimited).</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-2">Can I pause a recording?</h4>
+                            <p class="text-gray-600">Yes, press the pause button during recording and resume whenever you want.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Transcription & AI -->
+                <div class="mb-10">
+                    <h3 class="text-lg font-semibold text-[#92600a] mb-4 pb-2 border-b border-gray-100">Transcription & AI</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-2">How does transcription work?</h4>
+                            <p class="text-gray-600">We use AssemblyAI to transcribe the audio and automatically identify different speakers.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-2">What languages are supported?</h4>
+                            <p class="text-gray-600">Spanish, English, Portuguese, French, and German.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-2">What does the AI generate?</h4>
+                            <ul class="text-gray-600 list-disc list-inside space-y-1 ml-2">
+                                <li>Meeting summary</li>
+                                <li>Action items</li>
+                                <li>Keywords</li>
+                                <li>Key moments</li>
+                                <li>Chat to ask questions about the meeting</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-2">How long does processing take?</h4>
+                            <p class="text-gray-600">Usually between 1-3 minutes depending on the recording length.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Privacy & Security -->
+                <div class="mb-10">
+                    <h3 class="text-lg font-semibold text-[#92600a] mb-4 pb-2 border-b border-gray-100">Privacy & Security</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-2">Are my recordings private?</h4>
+                            <p class="text-gray-600">Yes. Your recordings are stored securely in Firebase and only you have access to them.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-2">Where is my audio stored?</h4>
+                            <p class="text-gray-600">On secure Google Cloud servers (Firebase Storage), encrypted in transit and at rest.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-2">How long is the audio kept?</h4>
+                            <p class="text-gray-600">Depends on your plan: Free (7 days), Starter (14 days), Pro (30 days), Plus (60 days), Business (90 days).</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-2">Can I delete my data?</h4>
+                            <p class="text-gray-600">Yes. Go to Profile → Delete Account to permanently delete all your data.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Subscriptions -->
+                <div class="mb-10">
+                    <h3 class="text-lg font-semibold text-[#92600a] mb-4 pb-2 border-b border-gray-100">Subscriptions</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-2">What's included in the free plan?</h4>
+                            <ul class="text-gray-600 list-disc list-inside space-y-1 ml-2">
+                                <li>90 minutes of recording (one-time, doesn't renew)</li>
+                                <li>6 AI feature uses (lifetime)</li>
+                                <li>Maximum 10-minute meetings</li>
+                                <li>7-day audio retention</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-2">How do I subscribe to a paid plan?</h4>
+                            <p class="text-gray-600">Go to Profile → Manage Subscription and select your preferred plan.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-2">How do I cancel my subscription?</h4>
+                            <ol class="text-gray-600 list-decimal list-inside space-y-1 ml-2">
+                                <li>Open your iPhone Settings</li>
+                                <li>Tap your name (Apple ID)</li>
+                                <li>Tap Subscriptions</li>
+                                <li>Select NotarIA</li>
+                                <li>Tap Cancel Subscription</li>
+                            </ol>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-2">Are there refunds?</h4>
+                            <p class="text-gray-600">Refunds are managed by Apple. You can request them at <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener noreferrer" class="text-[#92600a] hover:underline">reportaproblem.apple.com</a>.</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-2">What happens if I cancel?</h4>
+                            <p class="text-gray-600">You keep access until the end of the billing period. After that, you return to the free plan.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Common Issues -->
+                <div>
+                    <h3 class="text-lg font-semibold text-[#92600a] mb-4 pb-2 border-b border-gray-100">Common Issues</h3>
+                    <div class="space-y-6">
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-2">Transcription doesn't appear</h4>
+                            <ul class="text-gray-600 list-disc list-inside space-y-1 ml-2">
+                                <li>Check your internet connection</li>
+                                <li>Wait 1-3 minutes after saving the recording</li>
+                                <li>Pull-to-refresh on the meetings list</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-2">Audio quality is poor</h4>
+                            <ul class="text-gray-600 list-disc list-inside space-y-1 ml-2">
+                                <li>Make sure to record in a quiet environment</li>
+                                <li>Keep the phone close to the speakers</li>
+                                <li>Check that the microphone isn't obstructed</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-2">App crashes unexpectedly</h4>
+                            <ul class="text-gray-600 list-disc list-inside space-y-1 ml-2">
+                                <li>Make sure you have iOS 17 or higher</li>
+                                <li>Restart the app</li>
+                                <li>If it persists, reinstall the application</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-900 mb-2">Can't sign in</h4>
+                            <ul class="text-gray-600 list-disc list-inside space-y-1 ml-2">
+                                <li>Check your internet connection</li>
+                                <li>Try Google or Apple Sign-In</li>
+                                <li>If using email, verify it's correct</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pricing Table -->
+            <div class="bg-white rounded-2xl border border-gray-200 p-8 mb-8 shadow-sm">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">Plans & Pricing</h2>
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr class="border-b border-gray-200">
+                                <th class="text-left py-3 px-4 font-semibold text-gray-900">Plan</th>
+                                <th class="text-left py-3 px-4 font-semibold text-gray-900">Price</th>
+                                <th class="text-left py-3 px-4 font-semibold text-gray-900">Minutes</th>
+                                <th class="text-left py-3 px-4 font-semibold text-gray-900">Max Duration</th>
+                                <th class="text-left py-3 px-4 font-semibold text-gray-900">Retention</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-600">
+                            <tr class="border-b border-gray-100">
+                                <td class="py-3 px-4 font-medium text-gray-900">Free</td>
+                                <td class="py-3 px-4">Free</td>
+                                <td class="py-3 px-4">90 (one-time)</td>
+                                <td class="py-3 px-4">10 min</td>
+                                <td class="py-3 px-4">7 days</td>
+                            </tr>
+                            <tr class="border-b border-gray-100">
+                                <td class="py-3 px-4 font-medium text-gray-900">Starter</td>
+                                <td class="py-3 px-4">$4.99/mo</td>
+                                <td class="py-3 px-4">150/mo</td>
+                                <td class="py-3 px-4">15 min</td>
+                                <td class="py-3 px-4">14 days</td>
+                            </tr>
+                            <tr class="border-b border-gray-100 bg-amber-50">
+                                <td class="py-3 px-4 font-medium text-gray-900">Pro</td>
+                                <td class="py-3 px-4">$9.99/mo</td>
+                                <td class="py-3 px-4">400/mo</td>
+                                <td class="py-3 px-4">60 min</td>
+                                <td class="py-3 px-4">30 days</td>
+                            </tr>
+                            <tr class="border-b border-gray-100">
+                                <td class="py-3 px-4 font-medium text-gray-900">Plus</td>
+                                <td class="py-3 px-4">$14.99/mo</td>
+                                <td class="py-3 px-4">900/mo</td>
+                                <td class="py-3 px-4">Unlimited</td>
+                                <td class="py-3 px-4">60 days</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 px-4 font-medium text-gray-900">Business</td>
+                                <td class="py-3 px-4">$24.99/mo</td>
+                                <td class="py-3 px-4">2000/mo</td>
+                                <td class="py-3 px-4">Unlimited</td>
+                                <td class="py-3 px-4">90 days</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- System Requirements -->
+            <div class="bg-white rounded-2xl border border-gray-200 p-8 mb-8 shadow-sm">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">System Requirements</h2>
+                <ul class="text-gray-600 space-y-2">
+                    <li class="flex items-start gap-2">
+                        <span class="text-[#92600a]">•</span>
+                        <span>iPhone with iOS 17.0 or higher</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-[#92600a]">•</span>
+                        <span>Internet connection for transcription and AI features</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-[#92600a]">•</span>
+                        <span>Live translation requires iOS 18.0+</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Footer -->
+            <div class="text-center text-gray-500 text-sm pt-8 border-t border-gray-200">
+                <p>© 2025 RavencoreX. All rights reserved.</p>
+                <p class="mt-2">
+                    <a href="/" class="text-[#92600a] hover:underline">Home</a>
+                    <span class="mx-2">•</span>
+                    <a href="/privacy" class="text-[#92600a] hover:underline">Privacy Policy</a>
+                    <span class="mx-2">•</span>
+                    <a href="/terms" class="text-[#92600a] hover:underline">Terms of Service</a>
+                </p>
+            </div>
+        </div>
+    </section>
+</Layout>

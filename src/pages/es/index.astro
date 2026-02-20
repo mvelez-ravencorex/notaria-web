@@ -1,0 +1,42 @@
+---
+import LayoutEs from '../../layouts/LayoutEs.astro';
+import PromoBannerEs from '../../components/es/PromoBanner.tsx';
+import HeroEs from '../../components/es/Hero.tsx';
+import { FeaturesAccordionEs } from '../../components/es/FeaturesAccordion.tsx';
+import TestimonialsEs from '../../components/es/Testimonials.tsx';
+import AppShowcaseEs from '../../components/es/AppShowcase.tsx';
+import BigFeatureEs from '../../components/es/BigFeature.tsx';
+import StagesEs from '../../components/es/Stages.tsx';
+import SecurityEs from '../../components/es/Security.tsx';
+import PricingEs from '../../components/es/Pricing.tsx';
+import FooterEs from '../../components/es/Footer.tsx';
+---
+
+<LayoutEs
+    title="NotarIA - Transcripción y Resumen de Reuniones con IA para iOS"
+    description="Transforma tus reuniones en información accionable. NotarIA ofrece transcripción con IA, resúmenes automáticos, tareas, identificación de hablantes y traducción en vivo. 100% privacidad en el dispositivo. Descarga gratis en App Store."
+>
+    <HeroEs client:load />
+
+    <section id="how-it-works">
+        <StagesEs client:visible />
+    </section>
+
+    <AppShowcaseEs client:visible />
+
+    <BigFeatureEs client:visible />
+
+    <section id="features">
+        <FeaturesAccordionEs client:visible />
+    </section>
+
+    <SecurityEs client:visible />
+
+    <TestimonialsEs client:visible />
+
+    <section id="pricing">
+        <PricingEs client:visible />
+    </section>
+
+    <FooterEs client:load />
+</LayoutEs>

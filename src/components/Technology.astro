@@ -1,0 +1,61 @@
+---
+const techFeatures = [
+  {
+    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z" /></svg>`,
+    text: 'Procesamiento de Audio en Tiempo Real',
+  },
+  {
+    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>`,
+    text: 'Encriptacion de Nivel Empresarial',
+  },
+  {
+    icon: `<svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" /></svg>`,
+    text: 'Sincronizacion y Backup en la Nube',
+  },
+];
+---
+
+<section class="section-padding bg-[#0F172A] text-white relative overflow-hidden" id="technology">
+  <!-- Background pattern -->
+  <div class="absolute inset-0 opacity-30" style="background-image: linear-gradient(rgba(124, 58, 237, 0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(124, 58, 237, 0.1) 1px, transparent 1px); background-size: 50px 50px;"></div>
+
+  <!-- Glow effect -->
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/20 rounded-full blur-[100px]"></div>
+
+  <div class="container mx-auto px-6 relative z-10">
+    <div class="flex flex-col lg:flex-row items-center gap-16">
+      <!-- Info -->
+      <div class="lg:w-1/2">
+        <h2 class="text-4xl md:text-5xl font-bold mb-6 gradient-text">
+          Tecnologia Avanzada
+        </h2>
+        <p class="text-lg text-gray-300 leading-relaxed mb-8">
+          Impulsado por Redes Neuronales de ultima generacion y modelos de Procesamiento de Lenguaje Natural, NotarIA comprende el contexto, los matices del hablante y la terminologia especializada.
+        </p>
+
+        <div class="space-y-5">
+          {techFeatures.map((feature) => (
+            <div class="flex items-center gap-4 text-lg">
+              <span class="text-primary">
+                <Fragment set:html={feature.icon} />
+              </span>
+              <span class="text-gray-200">{feature.text}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Visual -->
+      <div class="lg:w-1/2">
+        <div class="relative h-[400px] md:h-[500px] bg-white/5 rounded-3xl border border-white/10 backdrop-blur-sm flex items-center justify-center">
+          <div class="tech-circle c1"></div>
+          <div class="tech-circle c2"></div>
+          <div class="tech-circle c3"></div>
+          <div class="absolute z-20 text-white font-bold text-2xl tracking-widest">
+            CORE AI
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

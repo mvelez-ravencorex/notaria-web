@@ -1,0 +1,51 @@
+---
+const faqs = [
+  {
+    question: "¿Mis datos están seguros?",
+    answer: "Absolutamente. Todo el procesamiento de audio se realiza en tu dispositivo utilizando la tecnología de Apple. Las grabaciones no salen de tu teléfono a menos que decidas respaldarlas en la nube."
+  },
+  {
+    question: "¿Qué idiomas soporta?",
+    answer: "Actualmente soportamos Español, Inglés, Portugués, Francés y Alemán. La detección del idioma es automática."
+  },
+  {
+    question: "¿Puedo exportar las reuniones?",
+    answer: "Sí, puedes exportar el resumen y la transcripción completa en formato PDF profesional, o compartir el texto plano."
+  },
+  {
+    question: "¿Funciona sin conexión a internet?",
+    answer: "La grabación funciona perfectamente sin conexión. Para la transcripción y funciones de IA, se requiere conexión a internet para procesar los modelos más avanzados."
+  },
+  {
+    question: "¿Cómo funciona la identificación de hablantes?",
+    answer: "Nuestra IA analiza los patrones de voz únicos de cada participante para diferenciarlos. Puedes asignar nombres manualmente la primera vez y la app aprenderá."
+  }
+];
+---
+
+<section id="faq" class="py-24 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">Preguntas Frecuentes</h2>
+      <p class="text-xl text-gray-600">Resolvemos tus dudas sobre NotarIA.</p>
+    </div>
+
+    <div class="max-w-3xl mx-auto space-y-4">
+      {faqs.map((faq, index) => (
+        <details class="group bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
+          <summary class="flex justify-between items-center p-6 cursor-pointer font-semibold text-lg text-gray-900 list-none">
+            {faq.question}
+            <span class="transition-transform group-open:rotate-180">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-emerald-500">
+                <path stroke-linecap="round" stroke-linejoin="round" d="m19.5 8.25-7.5 7.5-7.5-7.5" />
+              </svg>
+            </span>
+          </summary>
+          <div class="px-6 pb-6 text-gray-600 leading-relaxed border-t border-gray-100 pt-4">
+            {faq.answer}
+          </div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>

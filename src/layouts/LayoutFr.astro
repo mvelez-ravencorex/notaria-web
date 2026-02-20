@@ -1,0 +1,147 @@
+---
+import '../styles/global.css'
+import HeaderFr from '../components/HeaderFr.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  image?: string;
+  canonicalURL?: string;
+  type?: string;
+  pagePath?: string;
+}
+
+const {
+  title,
+  description = "NotarIA - Transformez vos réunions en informations exploitables. Transcription IA, résumés, tâches, analyse de sentiment et traduction en direct. Disponible pour iPhone et iPad.",
+  image = "/og-image.png",
+  canonicalURL = Astro.url.href,
+  type = "website",
+  pagePath = "",
+} = Astro.props;
+
+const siteName = "NotarIA";
+const twitterHandle = "@notaria_app";
+const fullTitle = title.includes("NotarIA") ? title : `${title} | NotarIA`;
+
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "NotarIA",
+  "applicationCategory": "ProductivityApplication",
+  "operatingSystem": "iOS 17+",
+  "offers": {
+    "@type": "AggregateOffer",
+    "lowPrice": "0",
+    "highPrice": "24.99",
+    "priceCurrency": "USD",
+    "offerCount": "5"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "ratingCount": "2000"
+  },
+  "description": description,
+  "screenshot": image,
+  "featureList": [
+    "Transcription IA",
+    "Résumés de réunions",
+    "Extraction de tâches",
+    "Identification des intervenants",
+    "Analyse de sentiment",
+    "Traduction en direct (sur l'appareil)",
+    "Chat IA sur vos réunions",
+    "6 langues prises en charge"
+  ]
+};
+
+const organizationData = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "NotarIA",
+  "url": "https://notaria.app",
+  "logo": "https://notaria.app/logo.png",
+  "sameAs": [
+    "https://twitter.com/notaria_app"
+  ]
+};
+---
+
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Analytics -->
+    <script is:inline async src="https://www.googletagmanager.com/gtag/js?id=G-L9JZFSTXZ1"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-L9JZFSTXZ1');
+    </script>
+
+    <title>{fullTitle}</title>
+    <meta name="title" content={fullTitle} />
+    <meta name="description" content={description} />
+    <meta name="keywords" content="transcription de réunions, transcription IA, notes de réunions, enregistreur vocal, voix vers texte, résumé de réunions, tâches, analyse de sentiment, identification des intervenants, traduction en direct, app iOS, app iPad, app de productivité, intelligence de réunions" />
+    <meta name="author" content="NotarIA" />
+    <meta name="robots" content="index, follow" />
+    <meta name="language" content="French" />
+    <link rel="canonical" href={canonicalURL} />
+
+    <!-- Hreflang -->
+    <link rel="alternate" hreflang="en" href={`https://notaria.app${pagePath}`} />
+    <link rel="alternate" hreflang="es" href={`https://notaria.app/es${pagePath}`} />
+    <link rel="alternate" hreflang="pt" href={`https://notaria.app/pt${pagePath}`} />
+    <link rel="alternate" hreflang="fr" href={`https://notaria.app/fr${pagePath}`} />
+    <link rel="alternate" hreflang="de" href={`https://notaria.app/de${pagePath}`} />
+    <link rel="alternate" hreflang="it" href={`https://notaria.app/it${pagePath}`} />
+    <link rel="alternate" hreflang="x-default" href={`https://notaria.app${pagePath}`} />
+
+    <meta property="og:type" content={type} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={image} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate" content="es_AR" />
+    <meta property="og:locale:alternate" content="pt_BR" />
+    <meta property="og:locale:alternate" content="de_DE" />
+    <meta property="og:locale:alternate" content="it_IT" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalURL} />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={image} />
+    <meta name="twitter:site" content={twitterHandle} />
+    <meta name="twitter:creator" content={twitterHandle} />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content={siteName} />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="apple-itunes-app" content="app-id=YOUR_APP_ID" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#92600a" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+    <script type="application/ld+json" set:html={JSON.stringify(organizationData)} />
+  </head>
+  <body class="min-h-screen bg-white text-gray-900 overflow-x-hidden">
+    <HeaderFr />
+    <main>
+      <slot />
+    </main>
+  </body>
+</html>

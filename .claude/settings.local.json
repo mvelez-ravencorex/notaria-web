@@ -1,0 +1,41 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm create:*)",
+      "Bash(npx astro add:*)",
+      "Bash(npm install)",
+      "Bash(npm run build:*)",
+      "Bash(curl:*)",
+      "Bash(timeout 10 npm run dev:*)",
+      "Bash(npm run dev)",
+      "WebFetch(domain:claid.ai)",
+      "Bash(find:*)",
+      "Bash(npm install:*)",
+      "Bash(ls:*)",
+      "Bash(npx tsc:*)",
+      "Bash(lsof:*)",
+      "Bash(ss:*)",
+      "Bash(pkill:*)",
+      "Bash(npx astro dev:*)",
+      "Bash(pgrep:*)",
+      "Bash(pnpm dev:*)",
+      "Bash(pnpm:*)",
+      "Bash(npx astro:*)",
+      "Bash(npm run dev:*)",
+      "Bash(grep:*)",
+      "Bash(done)",
+      "Bash(sips:*)",
+      "Bash(for f in /Users/martinvelez/Documents/Remoto/Projects/RavenCoreX/Productos/github-ravencorex/notaria-web/public/favicon*.png /Users/martinvelez/Documents/Remoto/Projects/RavenCoreX/Productos/github-ravencorex/notaria-web/public/apple-touch-icon.png /Users/martinvelez/Documents/Remoto/Projects/RavenCoreX/Productos/github-ravencorex/notaria-web/public/android-chrome*.png /Users/martinvelez/Documents/Remoto/Projects/RavenCoreX/Productos/github-ravencorex/notaria-web/public/logo.png)",
+      "Bash(md5:*)",
+      "WebSearch",
+      "Bash(python3:*)",
+      "WebFetch(domain:notaria.app)",
+      "Bash(wc:*)",
+      "Bash(node:*)",
+      "Bash(script -q /dev/null npx astro build)",
+      "Bash(echo:*)",
+      "Bash(git checkout:*)",
+      "Bash(git add:*)"
+    ]
+  }
+}

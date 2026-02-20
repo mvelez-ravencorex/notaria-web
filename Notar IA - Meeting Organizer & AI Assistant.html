@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notar IA - Meeting Organizer & AI Assistant</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2563EB;
+            --primary-dark: #1E40AF;
+            --secondary: #64748B;
+            --accent: #F59E0B;
+            --bg-light: #FFFFFF;
+            --bg-gray: #F8FAFC;
+            --text-main: #0F172A;
+            --text-sub: #475569;
+            --border: #E2E8F0;
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --font-heading: 'Alibaba-PuHuiTi-Bold', sans-serif;
+            --font-body: 'MiSans-Regular', sans-serif;
+        }
+
+        @font-face {
+            font-family: 'Alibaba-PuHuiTi-Bold';
+            src: url('https://assets-persist.lovart.ai/agent-static-assets/Alibaba-PuHuiTi-Bold.otf');
+        }
+        @font-face {
+            font-family: 'MiSans-Regular';
+            src: url('https://assets-persist.lovart.ai/agent-static-assets/MiSans-Regular.ttf');
+        }
+        @font-face {
+            font-family: 'MiSans-Medium';
+            src: url('https://assets-persist.lovart.ai/agent-static-assets/MiSans-Medium.ttf');
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 1920px;
+            margin: 0 auto;
+            font-family: var(--font-body);
+            color: var(--text-main);
+            background-color: var(--bg-light);
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Utility Classes */
+        .container {
+            width: 1440px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-family: 'MiSans-Medium', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+            box-shadow: 0 4px 14px 0 rgba(37, 99, 235, 0.39);
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            border: 1px solid var(--border);
+            color: var(--text-main);
+            background: white;
+        }
+
+        .section-padding {
+            padding: 100px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-family: var(--font-heading);
+            font-size: 48px;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, var(--text-main) 0%, var(--primary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .section-title p {
+            color: var(--text-sub);
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Header */
+        header {
+            height: 90px;
+            display: flex;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            border-bottom: 1px solid var(--border);
+            width: 1920px;
+            margin: 0 auto;
+        }
+
+        .nav-container {
+            width: 1440px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 28px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        .logo i {
+            font-size: 32px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav-links a {
+            font-family: 'MiSans-Medium', sans-serif;
+            color: var(--text-sub);
+            font-size: 16px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding-top: 180px;
+            padding-bottom: 120px;
+            background: linear-gradient(180deg, #F0F9FF 0%, #FFFFFF 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .hero-content {
+            width: 45%;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(37, 99, 235, 0.1);
+            color: var(--primary);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 {
+            font-family: var(--font-heading);
+            font-size: 72px;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            color: var(--text-main);
+        }
+
+        .hero h2 {
+            font-size: 24px;
+            color: var(--text-sub);
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+
+        .hero-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 48px;
+        }
+
+        .hero-feature-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text-main);
+            font-weight: 500;
+        }
+
+        .hero-feature-item i {
+            color: var(--primary);
+            font-size: 20px;
+        }
+
+        .hero-visuals {
+            width: 55%;
+            position: relative;
+            height: 800px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* iPhone Mockups CSS */
+        .phone-mockup {
+            position: absolute;
+            width: 320px;
+            height: 650px;
+            background: #000;
+            border-radius: 48px;
+            border: 10px solid #1a1a1a;
+            box-shadow: var(--shadow-xl);
+            overflow: hidden;
+            transition: transform 0.5s ease;
+        }
+
+        .phone-mockup::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 28px;
+            background: #1a1a1a;
+            border-bottom-left-radius: 16px;
+            border-bottom-right-radius: 16px;
+            z-index: 10;
+        }
+
+        .phone-mockup img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .phone-1 {
+            transform: translateX(-200px) translateY(40px) rotate(-10deg) scale(0.9);
+            z-index: 1;
+        }
+
+        .phone-2 {
+            transform: translateX(200px) translateY(40px) rotate(10deg) scale(0.9);
+            z-index: 1;
+        }
+
+        .phone-main {
+            transform: translateY(-20px) scale(1.05);
+            z-index: 2;
+            box-shadow: 0 25px 50px -12px rgba(37, 99, 235, 0.25);
+            border-color: #2e2e2e;
+        }
+
+        /* Features Section */
+        .features {
+            background-color: var(--bg-light);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+
+        .feature-card {
+            padding: 48px;
+            border-radius: 24px;
+            background: white;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow-lg);
+            transform: translateY(-5px);
+        }
+
+        .icon-box {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            background: #EFF6FF;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            margin-bottom: 24px;
+        }
+
+        .feature-card h3 {
+            font-family: var(--font-heading);
+            font-size: 24px;
+            margin-bottom: 16px;
+            color: var(--text-main);
+        }
+
+        .feature-card p {
+            color: var(--text-sub);
+            line-height: 1.6;
+        }
+
+        /* Technological Section */
+        .tech-section {
+            background-color: #0F172A;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .tech-bg-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(37, 99, 235, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(37, 99, 235, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            opacity: 0.3;
+        }
+        
+        .tech-glow {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(37, 99, 235, 0.3) 0%, transparent 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            filter: blur(50px);
+        }
+
+        .tech-container {
+            position: relative;
+            z-index: 10;
+            display: flex;
+            align-items: center;
+            gap: 80px;
+        }
+
+        .tech-info {
+            flex: 1;
+        }
+
+        .tech-info h2 {
+            font-family: var(--font-heading);
+            font-size: 48px;
+            margin-bottom: 24px;
+            background: linear-gradient(to right, #60A5FA, #A78BFA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .tech-info p {
+            font-size: 18px;
+            line-height: 1.8;
+            color: #CBD5E1;
+            margin-bottom: 32px;
+        }
+
+        .tech-visual {
+            flex: 1;
+            height: 500px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+
+        .tech-circle {
+            position: absolute;
+            border: 1px solid rgba(96, 165, 250, 0.3);
+            border-radius: 50%;
+        }
+
+        .c1 { width: 300px; height: 300px; animation: spin 20s linear infinite; border-top-color: #60A5FA; border-width: 2px;}
+        .c2 { width: 220px; height: 220px; animation: spin-rev 15s linear infinite; border-bottom-color: #A78BFA; border-width: 2px;}
+        .c3 { width: 140px; height: 140px; background: rgba(37, 99, 235, 0.2); backdrop-filter: blur(5px);}
+
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+        @keyframes spin-rev { 100% { transform: rotate(-360deg); } }
+
+        .ai-chip {
+            position: absolute;
+            z-index: 20;
+            color: white;
+            font-family: 'Alibaba-PuHuiTi-Bold';
+            font-size: 24px;
+            letter-spacing: 2px;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            background-color: var(--bg-gray);
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .stars {
+            color: var(--accent);
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .quote {
+            font-size: 18px;
+            line-height: 1.6;
+            color: var(--text-main);
+            margin-bottom: 32px;
+            font-style: italic;
+        }
+
+        .user-info {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .avatar {
+            width: 48px;
+            height: 48px;
+            background: #E2E8F0;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: var(--text-sub);
+        }
+
+        .user-details h4 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .user-details span {
+            font-size: 14px;
+            color: var(--text-sub);
+        }
+
+        /* Footer */
+        footer {
+            background: white;
+            border-top: 1px solid var(--border);
+            padding: 80px 0 40px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 60px;
+        }
+
+        .footer-brand h3 {
+            font-family: var(--font-heading);
+            font-size: 24px;
+            color: var(--primary);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .footer-brand p {
+            color: var(--text-sub);
+            line-height: 1.6;
+            margin-bottom: 24px;
+            max-width: 300px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--bg-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-sub);
+            transition: all 0.3s;
+        }
+
+        .social-link:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .footer-col h4 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 24px;
+            color: var(--text-main);
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .footer-links a {
+            color: var(--text-sub);
+            font-size: 15px;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 40px;
+            border-top: 1px solid var(--border);
+            color: var(--text-sub);
+            font-size: 14px;
+        }
+
+        /* Floating Elements */
+        .float-shape {
+            position: absolute;
+            opacity: 0.4;
+            z-index: 1;
+        }
+        .shape-1 { top: 20%; left: 5%; width: 100px; height: 100px; background: radial-gradient(#60A5FA, transparent); filter: blur(40px); }
+        .shape-2 { bottom: 20%; right: 5%; width: 200px; height: 200px; background: radial-gradient(#A78BFA, transparent); filter: blur(60px); }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="nav-container">
+            <div class="logo">
+                <i class="ri-voiceprint-line"></i>
+                Notar IA
+            </div>
+            <nav class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">Features</a>
+                <a href="#">About</a>
+                <a href="#">Pricing</a>
+                <a href="#">Download</a>
+            </nav>
+            <a href="#" class="btn btn-primary">Get Started</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="float-shape shape-1"></div>
+        <div class="float-shape shape-2"></div>
+        
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">New AI Model 2.0</div>
+                <h1>From Meetings to Action</h1>
+                <h2>Your AI-powered meeting assistant that captures, transcribes, and organizes effortlessly.</h2>
+                
+                <div class="hero-features">
+                    <div class="hero-feature-item">
+                        <i class="ri-translate-2"></i>
+                        <span>Multi-language (5+)</span>
+                    </div>
+                    <div class="hero-feature-item">
+                        <i class="ri-mic-line"></i>
+                        <span>Auto Transcription</span>
+                    </div>
+                    <div class="hero-feature-item">
+                        <i class="ri-brain-line"></i>
+                        <span>Smart Summaries</span>
+                    </div>
+                    <div class="hero-feature-item">
+                        <i class="ri-folder-shield-2-line"></i>
+                        <span>Secure Organization</span>
+                    </div>
+                </div>
+
+                <div style="display: flex; gap: 16px;">
+                    <a href="#" class="btn btn-primary">Start Free Trial</a>
+                    <a href="#" class="btn btn-outline"><i class="ri-play-circle-line" style="margin-right: 8px;"></i> Watch Demo</a>
+                </div>
+            </div>
+
+            <div class="hero-visuals">
+                <!-- Phone 1 (Back Left) - Folders -->
+                <div class="phone-mockup phone-1">
+                    <img src="https://a.lovart.ai/artifacts/agent/nE93z3t9P6q4nroH.png" alt="Organization Folders">
+                </div>
+                
+                <!-- Phone 2 (Back Right) - Chat -->
+                <div class="phone-mockup phone-2">
+                    <img src="https://a.lovart.ai/artifacts/agent/7JTMHrmpYZQzMn2m.png" alt="AI Chat">
+                </div>
+
+                <!-- Phone Main (Center Front) - Recording -->
+                <div class="phone-mockup phone-main">
+                    <img src="https://a.lovart.ai/artifacts/agent/DqHb1B9cQKRPg2jO.png" alt="Recording Interface">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="section-padding features">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why Choose Notar IA?</h2>
+                <p>Streamline your workflow with powerful tools designed for professionals.</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon-box">
+                        <i class="ri-global-line"></i>
+                    </div>
+                    <h3>Multi-language Recording</h3>
+                    <p>Seamlessly record and transcribe meetings in over 5 languages instantly. Break down communication barriers with real-time translation and subtitle generation.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="icon-box">
+                        <i class="ri-openai-line"></i>
+                    </div>
+                    <h3>Smart AI Assistant</h3>
+                    <p>Our advanced AI analyzes your meetings to generate concise summaries, action items, and key takeaways, saving you hours of post-meeting work.</p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="icon-box">
+                        <i class="ri-file-list-3-line"></i>
+                    </div>
+                    <h3>Organized Folders</h3>
+                    <p>Keep your recordings and transcripts neatly organized. Create custom folders, tag meetings, and search through your entire history in seconds.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technological Section -->
+    <section class="section-padding tech-section">
+        <div class="tech-bg-pattern"></div>
+        <div class="tech-glow"></div>
+        <div class="container tech-container">
+            <div class="tech-info">
+                <h2>Advanced Technology</h2>
+                <p>Powered by next-generation Neural Networks and Natural Language Processing models, Notar IA understands context, speaker nuances, and specialized terminology.</p>
+                <div class="tech-list" style="display: grid; gap: 20px;">
+                    <div style="display: flex; align-items: center; gap: 12px; font-size: 18px;">
+                        <i class="ri-cpu-line" style="color: #60A5FA;"></i>
+                        <span>Real-time Audio Processing</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 12px; font-size: 18px;">
+                        <i class="ri-shield-check-line" style="color: #60A5FA;"></i>
+                        <span>Enterprise-grade Encryption</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 12px; font-size: 18px;">
+                        <i class="ri-cloud-windy-line" style="color: #60A5FA;"></i>
+                        <span>Cloud Sync & Backup</span>
+                    </div>
+                </div>
+            </div>
+            <div class="tech-visual">
+                <div class="tech-circle c1"></div>
+                <div class="tech-circle c2"></div>
+                <div class="tech-circle c3"></div>
+                <div class="ai-chip">CORE AI</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section-padding testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Users Say</h2>
+                <p>Join thousands of professionals who have transformed their meeting productivity.</p>
+            </div>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                    </div>
+                    <p class="quote">"Notar IA has completely changed how I manage my client meetings. The transcription accuracy is incredible, even with technical jargon."</p>
+                    <div class="user-info">
+                        <div class="avatar">SJ</div>
+                        <div class="user-details">
+                            <h4>Sarah Jenkins</h4>
+                            <span>Product Manager</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                    </div>
+                    <p class="quote">"The summary feature is a lifesaver. I get a perfect recap of a one-hour meeting in 30 seconds. Highly recommended!"</p>
+                    <div class="user-info">
+                        <div class="avatar">MR</div>
+                        <div class="user-details">
+                            <h4>Michael Ross</h4>
+                            <span>Consultant</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="stars">
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-fill"></i>
+                        <i class="ri-star-half-fill"></i>
+                    </div>
+                    <p class="quote">"Finally, an app that handles multi-language meetings well. My international team loves the instant translation feature."</p>
+                    <div class="user-info">
+                        <div class="avatar">YL</div>
+                        <div class="user-details">
+                            <h4>Yuki Lin</h4>
+                            <span>Global Coordinator</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3><i class="ri-voiceprint-line"></i> Notar IA</h3>
+                    <p>Your intelligent assistant for smarter meetings. Capture every detail, organize every thought, and act on every decision.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="ri-twitter-x-line"></i></a>
+                        <a href="#" class="social-link"><i class="ri-linkedin-fill"></i></a>
+                        <a href="#" class="social-link"><i class="ri-instagram-line"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <nav class="footer-links">
+                        <a href="#">Features</a>
+                        <a href="#">Pricing</a>
+                        <a href="#">Download</a>
+                        <a href="#">Changelog</a>
+                    </nav>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <nav class="footer-links">
+                        <a href="#">About Us</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Contact</a>
+                    </nav>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <nav class="footer-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                        <a href="#">Security</a>
+                    </nav>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2024 Notar IA. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

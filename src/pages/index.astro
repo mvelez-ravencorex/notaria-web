@@ -1,0 +1,51 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PromoBanner from '../components/PromoBanner';
+import Hero from '../components/Hero';
+import { FeaturesAccordion } from '../components/ui/interactive-image-accordion';
+import Testimonials from '../components/Testimonials';
+import AppShowcase from '../components/AppShowcase';
+import BigFeature from '../components/BigFeature';
+import Stages from '../components/Stages';
+import Security from '../components/Security';
+import Pricing from '../components/Pricing';
+import Footer from '../components/Footer';
+---
+
+<Layout
+    title="NotarIA - AI Meeting Transcription & Summary App for iOS"
+    description="Transform meetings into actionable insights. NotarIA offers AI-powered transcription, automatic summaries, action items, and speaker identification. 100% on-device privacy. Download free on App Store."
+>
+    <!-- 1. Hero - Captura atención y beneficio principal -->
+    <Hero client:load />
+
+    <!-- 2. How it Works - Responde "¿Cómo lo hace?" con 3 pasos visuales -->
+    <section id="how-it-works">
+        <Stages client:visible />
+    </section>
+
+    <!-- 3. See it in action - Demo de la interfaz real -->
+    <AppShowcase client:visible />
+
+    <!-- 4. Powered by AI - Profundiza en la tecnología -->
+    <BigFeature client:visible />
+
+    <!-- 5. Powerful Features - Funciones extras y detalles técnicos -->
+    <section id="features">
+        <FeaturesAccordion client:visible />
+    </section>
+
+    <!-- 6. Security - Requisito antes de hablar de precio -->
+    <Security client:visible />
+
+    <!-- 7. Testimonials - Prueba social que valida todo -->
+    <Testimonials client:visible />
+
+    <!-- 8. Pricing - Paso final de conversión -->
+    <section id="pricing">
+        <Pricing client:visible />
+    </section>
+
+    <!-- 9. Footer -->
+    <Footer client:load />
+</Layout>

@@ -1,0 +1,33 @@
+---
+import LayoutDe from '../../layouts/LayoutDe.astro';
+import HeroDe from '../../components/de/Hero.tsx';
+import { FeaturesAccordionDe } from '../../components/de/FeaturesAccordion.tsx';
+import TestimonialsDe from '../../components/de/Testimonials.tsx';
+import AppShowcaseDe from '../../components/de/AppShowcase.tsx';
+import BigFeatureDe from '../../components/de/BigFeature.tsx';
+import StagesDe from '../../components/de/Stages.tsx';
+import SecurityDe from '../../components/de/Security.tsx';
+import PricingDe from '../../components/de/Pricing.tsx';
+import FooterDe from '../../components/de/Footer.tsx';
+---
+
+<LayoutDe
+    title="NotarIA - KI-Transkription und Meeting-Zusammenfassung für iOS"
+    description="Verwandeln Sie Ihre Meetings in umsetzbare Erkenntnisse. NotarIA bietet KI-Transkription, automatische Zusammenfassungen, Aufgaben, Sprechererkennung und Live-Übersetzung. 100% Datenschutz auf dem Gerät. Kostenlos im App Store herunterladen."
+>
+    <HeroDe client:load />
+    <section id="how-it-works">
+        <StagesDe client:visible />
+    </section>
+    <AppShowcaseDe client:visible />
+    <BigFeatureDe client:visible />
+    <section id="features">
+        <FeaturesAccordionDe client:visible />
+    </section>
+    <SecurityDe client:visible />
+    <TestimonialsDe client:visible />
+    <section id="pricing">
+        <PricingDe client:visible />
+    </section>
+    <FooterDe client:load />
+</LayoutDe>

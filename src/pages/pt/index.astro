@@ -1,0 +1,42 @@
+---
+import LayoutPt from '../../layouts/LayoutPt.astro';
+import PromoBannerPt from '../../components/pt/PromoBanner.tsx';
+import HeroPt from '../../components/pt/Hero.tsx';
+import { FeaturesAccordionPt } from '../../components/pt/FeaturesAccordion.tsx';
+import TestimonialsPt from '../../components/pt/Testimonials.tsx';
+import AppShowcasePt from '../../components/pt/AppShowcase.tsx';
+import BigFeaturePt from '../../components/pt/BigFeature.tsx';
+import StagesPt from '../../components/pt/Stages.tsx';
+import SecurityPt from '../../components/pt/Security.tsx';
+import PricingPt from '../../components/pt/Pricing.tsx';
+import FooterPt from '../../components/pt/Footer.tsx';
+---
+
+<LayoutPt
+    title="NotarIA - Transcrição e Resumo de Reuniões com IA para iOS"
+    description="Transforme suas reuniões em informações acionáveis. NotarIA oferece transcrição com IA, resumos automáticos, tarefas, identificação de falantes e tradução ao vivo. 100% privacidade no dispositivo. Baixe grátis na App Store."
+>
+    <HeroPt client:load />
+
+    <section id="how-it-works">
+        <StagesPt client:visible />
+    </section>
+
+    <AppShowcasePt client:visible />
+
+    <BigFeaturePt client:visible />
+
+    <section id="features">
+        <FeaturesAccordionPt client:visible />
+    </section>
+
+    <SecurityPt client:visible />
+
+    <TestimonialsPt client:visible />
+
+    <section id="pricing">
+        <PricingPt client:visible />
+    </section>
+
+    <FooterPt client:load />
+</LayoutPt>

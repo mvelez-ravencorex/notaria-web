@@ -1,0 +1,59 @@
+---
+const testimonials = [
+  {
+    quote: "Grabar mis reuniones de ventas y obtener los action items automáticamente ha duplicado mi productividad. Ya no pierdo tiempo pasando notas a limpio.",
+    name: "Carlos Mendoza",
+    role: "Director de Ventas",
+    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" 
+  },
+  {
+    quote: "Como abogada, la precisión es clave. NotarIA transcribe con una exactitud impresionante, incluso con terminología legal compleja. Es indispensable.",
+    name: "Laura Sánchez",
+    role: "Abogada Corporativa",
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+  },
+  {
+    quote: "Ideal para mis sesiones de consultoría. Puedo concentrarme totalmente en mi cliente sabiendo que tengo un respaldo perfecto de todo lo hablado.",
+    name: "Javier Torres",
+    role: "Consultor de Estrategia",
+    image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+  },
+  {
+    quote: "Me ayuda increíblemente con mis clases y grupos de estudio. El resumen automático me permite repasar los temas clave sin volver a escuchar horas de audio.",
+    name: "Ana Ruiz",
+    role: "Estudiante de Medicina",
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+  }
+];
+---
+
+<section id="testimonials" class="py-24 bg-white">
+  <div class="container mx-auto px-6">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">Confían en NotarIA</h2>
+      <p class="text-xl text-gray-600">Profesionales de todas las industrias usan NotarIA para ser más eficientes.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+      {testimonials.map((testimonial) => (
+        <div class="bg-gray-50 p-8 rounded-3xl hover:shadow-lg transition-shadow duration-300 border border-gray-100">
+          <div class="flex items-center gap-4 mb-6">
+            <img src={testimonial.image} alt={testimonial.name} class="w-12 h-12 rounded-full object-cover" />
+            <div>
+              <h4 class="font-bold text-gray-900">{testimonial.name}</h4>
+              <p class="text-sm text-gray-500">{testimonial.role}</p>
+            </div>
+          </div>
+          <p class="text-gray-700 leading-relaxed italic">"{testimonial.quote}"</p>
+          <div class="mt-4 flex text-emerald-500">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

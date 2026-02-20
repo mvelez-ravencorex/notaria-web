@@ -1,0 +1,108 @@
+---
+const plans = [
+  {
+    name: "Free",
+    price: "Gratis",
+    features: [
+      { name: "60 minutos/mes", included: true },
+      { name: "3 Resúmenes IA/mes", included: true },
+      { name: "3 Speaker ID/mes", included: true },
+      { name: "2 Carpetas", included: true },
+      { name: "7 días retención de audio", included: true },
+      { name: "Chat con IA", included: false },
+      { name: "Exportar PDF", included: false },
+    ],
+    cta: "Comenzar Gratis",
+    popular: false
+  },
+  {
+    name: "Pro",
+    price: "$9.99",
+    period: "/mes",
+    features: [
+      { name: "300 minutos/mes", included: true },
+      { name: "Resúmenes IA ilimitados", included: true },
+      { name: "Speaker ID ilimitado", included: true },
+      { name: "Carpetas ilimitadas", included: true },
+      { name: "30 días retención de audio", included: true },
+      { name: "Chat con IA", included: true },
+      { name: "Exportar PDF", included: true },
+    ],
+    cta: "Prueba Gratis 7 días",
+    popular: true
+  },
+  {
+    name: "Business",
+    price: "$29.99",
+    period: "/mes",
+    features: [
+      { name: "2000 minutos/mes", included: true },
+      { name: "Todo lo de Pro", included: true },
+      { name: "Prioridad de soporte", included: true },
+      { name: "Carpetas ilimitadas", included: true },
+      { name: "90 días retención de audio", included: true },
+      { name: "Chat con IA", included: true },
+      { name: "Exportar PDF", included: true },
+    ],
+    cta: "Contactar Ventas",
+    popular: false
+  }
+];
+---
+
+<section id="pricing" class="py-24 bg-gray-50">
+  <div class="container mx-auto px-6">
+    <div class="text-center max-w-3xl mx-auto mb-16">
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">Planes simples y transparentes</h2>
+      <p class="text-xl text-gray-600">Empieza gratis y mejora tu plan a medida que necesites más potencia.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      {plans.map((plan) => (
+        <div class={`relative rounded-3xl p-8 bg-white border ${plan.popular ? 'border-emerald-500 shadow-xl scale-105 z-10' : 'border-gray-200 shadow-sm'} flex flex-col`}>
+          {plan.popular && (
+            <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-emerald-500 text-white px-4 py-1 rounded-full text-sm font-semibold">
+              Más Popular
+            </div>
+          )}
+          
+          <div class="mb-8">
+            <h3 class="text-xl font-bold text-gray-900 mb-2">{plan.name}</h3>
+            <div class="flex items-baseline">
+              <span class="text-4xl font-bold text-gray-900">{plan.price}</span>
+              {plan.period && <span class="text-gray-500 ml-1">{plan.period}</span>}
+            </div>
+          </div>
+
+          <ul class="space-y-4 mb-8 flex-1">
+            {plan.features.map((feature) => (
+              <li class="flex items-start text-sm">
+                {feature.included ? (
+                  <svg class="w-5 h-5 text-emerald-500 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                ) : (
+                  <svg class="w-5 h-5 text-gray-300 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                )}
+                <span class={feature.included ? 'text-gray-700' : 'text-gray-400'}>{feature.name}</span>
+              </li>
+            ))}
+          </ul>
+
+          <a 
+            href="#download" 
+            class={`w-full py-3 rounded-xl font-semibold text-center transition-colors ${
+              plan.popular 
+                ? 'bg-emerald-500 hover:bg-emerald-600 text-white' 
+                : 'bg-gray-100 hover:bg-gray-200 text-gray-900'
+            }`}
+          >
+            {plan.cta}
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

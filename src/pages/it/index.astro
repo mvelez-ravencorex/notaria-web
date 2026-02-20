@@ -1,0 +1,33 @@
+---
+import LayoutIt from '../../layouts/LayoutIt.astro';
+import HeroIt from '../../components/it/Hero.tsx';
+import { FeaturesAccordionIt } from '../../components/it/FeaturesAccordion.tsx';
+import TestimonialsIt from '../../components/it/Testimonials.tsx';
+import AppShowcaseIt from '../../components/it/AppShowcase.tsx';
+import BigFeatureIt from '../../components/it/BigFeature.tsx';
+import StagesIt from '../../components/it/Stages.tsx';
+import SecurityIt from '../../components/it/Security.tsx';
+import PricingIt from '../../components/it/Pricing.tsx';
+import FooterIt from '../../components/it/Footer.tsx';
+---
+
+<LayoutIt
+    title="NotarIA - Trascrizione IA e riassunto riunioni per iOS"
+    description="Trasforma le tue riunioni in informazioni utili. NotarIA offre trascrizione IA, riassunti automatici, attività, riconoscimento dei relatori e traduzione in tempo reale. 100% privacy sul dispositivo. Scarica gratis dall'App Store."
+>
+    <HeroIt client:load />
+    <section id="how-it-works">
+        <StagesIt client:visible />
+    </section>
+    <AppShowcaseIt client:visible />
+    <BigFeatureIt client:visible />
+    <section id="features">
+        <FeaturesAccordionIt client:visible />
+    </section>
+    <SecurityIt client:visible />
+    <TestimonialsIt client:visible />
+    <section id="pricing">
+        <PricingIt client:visible />
+    </section>
+    <FooterIt client:load />
+</LayoutIt>

@@ -1,0 +1,78 @@
+---
+import logoDark from '../assets/images/notaria-dark.png';
+
+const currentYear = new Date().getFullYear();
+
+const footerLinks = [
+  {
+    title: 'Producto',
+    links: [
+      { label: 'Características', href: '#features' },
+      { label: 'Cómo Funciona', href: '#how-it-works' },
+      { label: 'Planes', href: '#pricing' },
+      { label: 'Descargar', href: '#download' },
+    ],
+  },
+  {
+    title: 'Legal',
+    links: [
+      { label: 'Política de Privacidad', href: '/privacidad' },
+      { label: 'Términos de Servicio', href: '/terminos' },
+    ],
+  },
+  {
+    title: 'Contacto',
+    links: [
+      { label: 'Soporte', href: 'mailto:soporte@notaria.app' },
+      { label: 'Twitter', href: '#' },
+      { label: 'LinkedIn', href: '#' },
+    ],
+  },
+];
+---
+
+<footer class="bg-gray-900 text-white py-16 border-t border-gray-800">
+  <div class="container mx-auto px-6">
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+      <!-- Brand -->
+      <div class="lg:col-span-1">
+        <a href="/" class="flex items-center gap-2 mb-6">
+          <img src={logoDark.src} alt="NotarIA" class="h-10 w-10 rounded-xl bg-white p-1" />
+          <span class="text-2xl font-bold">NotarIA</span>
+        </a>
+        <p class="text-gray-400 text-sm leading-relaxed mb-6">
+          Tu asistente de reuniones con IA. Graba, transcribe y resume automáticamente para que nunca pierdas un detalle.
+        </p>
+      </div>
+
+      <!-- Links -->
+      {footerLinks.map((section) => (
+        <div>
+          <h4 class="font-bold text-white mb-6 uppercase text-sm tracking-wider">{section.title}</h4>
+          <nav class="flex flex-col gap-3">
+            {section.links.map((link) => (
+              <a href={link.href} class="text-gray-400 hover:text-emerald-400 transition-colors text-sm">
+                {link.label}
+              </a>
+            ))}
+          </nav>
+        </div>
+      ))}
+    </div>
+
+    <!-- Copyright -->
+    <div class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4">
+      <p class="text-gray-500 text-xs">
+        &copy; {currentYear} NotarIA. Todos los derechos reservados.
+      </p>
+      <div class="flex items-center gap-6">
+         <a href="#" class="text-gray-500 hover:text-white transition-colors">
+            <span class="sr-only">Twitter</span>
+            <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84" />
+            </svg>
+          </a>
+      </div>
+    </div>
+  </div>
+</footer>

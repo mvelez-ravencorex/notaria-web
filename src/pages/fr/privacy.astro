@@ -1,0 +1,503 @@
+---
+import LayoutFr from '../../layouts/LayoutFr.astro';
+---
+
+<LayoutFr
+    title="Politique de confidentialité - NotarIA"
+    description="Politique de confidentialité de NotarIA. Découvrez comment nous collectons, utilisons, stockons et protégeons vos informations personnelles."
+    pagePath="/privacy"
+>
+    <section class="pt-32 pb-20 px-6 bg-gray-50 min-h-screen">
+        <div class="max-w-4xl mx-auto">
+            <!-- Header -->
+            <div class="text-center mb-12">
+                <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+                    Politique de confidentialité
+                </h1>
+                <p class="text-gray-600 font-medium mb-2">NotarIA — Transcription de réunions par IA</p>
+                <p class="text-gray-500">Date d'entrée en vigueur : 10 février 2026</p>
+            </div>
+
+            <!-- Intro paragraph -->
+            <div class="bg-white rounded-2xl border border-gray-200 p-8 mb-8 shadow-sm">
+                <p class="text-gray-600 leading-relaxed">
+                    Cette Politique de confidentialité décrit comment RavencoreX LLC (« nous », « notre ») collecte, utilise et protège vos informations lorsque vous utilisez l'application mobile NotarIA (« l'Application »). Nous nous engageons à protéger votre vie privée et à être transparents sur nos pratiques en matière de données.
+                </p>
+            </div>
+
+            <!-- Core Principle (blue callout) -->
+            <div class="bg-blue-50 border border-blue-200 rounded-2xl p-6 mb-8">
+                <div class="flex items-start gap-3">
+                    <span class="text-2xl">🛡️</span>
+                    <div>
+                        <h2 class="font-bold text-blue-800 mb-3">NOTRE PRINCIPE FONDAMENTAL</h2>
+                        <p class="text-blue-700 text-sm leading-relaxed">
+                            NotarIA est conçue avec une <strong>approche de confidentialité d'abord</strong>. L'audio est enregistré et stocké localement sur votre appareil. Nous ne plaçons pas de bots dans vos visioconférences. Vous avez le contrôle total de vos données et pouvez tout supprimer à tout moment.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 1: Information We Collect -->
+            <div class="bg-white rounded-2xl border border-gray-200 p-8 mb-8 shadow-sm">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">1. Informations que nous collectons</h2>
+
+                <div class="space-y-4">
+                    <!-- 1.1 Account Information -->
+                    <div class="bg-gray-50 rounded-xl p-4">
+                        <h3 class="font-semibold text-gray-900 mb-2">1.1 Informations du compte</h3>
+                        <p class="text-gray-600 text-sm mb-3">Lorsque vous créez un compte, nous collectons :</p>
+                        <ul class="text-gray-600 text-sm space-y-1">
+                            <li><span class="text-[#92600a]">&#10003;</span> <strong>Adresse e-mail</strong> — utilisée pour l'authentification et la récupération de compte</li>
+                            <li><span class="text-[#92600a]">&#10003;</span> <strong>Nom d'affichage</strong> — visible dans l'Application</li>
+                            <li><span class="text-[#92600a]">&#10003;</span> <strong>Photo de profil</strong> (optionnel) — si vous choisissez d'en ajouter une</li>
+                            <li><span class="text-[#92600a]">&#10003;</span> <strong>Fournisseur d'authentification</strong> — si vous vous connectez avec e-mail, Google ou Apple ID</li>
+                        </ul>
+                        <p class="text-gray-500 text-sm mt-3">
+                            Si vous vous connectez avec Google ou Apple, nous recevons uniquement les informations que ces services partagent (généralement nom et e-mail). Nous ne recevons ni ne stockons jamais votre mot de passe Google ou Apple.
+                        </p>
+                    </div>
+
+                    <!-- 1.2 Audio Recordings -->
+                    <div class="bg-gray-50 rounded-xl p-4">
+                        <h3 class="font-semibold text-gray-900 mb-2">1.2 Enregistrements audio</h3>
+                        <p class="text-gray-600 text-sm mb-3">
+                            NotarIA enregistre l'audio depuis le microphone de votre appareil lorsque vous démarrez une session d'enregistrement. Les enregistrements audio sont :
+                        </p>
+                        <ul class="text-gray-600 text-sm space-y-1">
+                            <li><span class="text-[#92600a]">&#10003;</span> <strong>Stockés localement</strong> sur votre appareil d'abord</li>
+                            <li><span class="text-[#92600a]">&#10003;</span> <strong>Téléchargés sur Firebase Storage</strong> (Google Cloud) pour traitement</li>
+                            <li><span class="text-[#92600a]">&#10003;</span> <strong>Supprimés automatiquement</strong> du stockage cloud après l'expiration de la période de rétention de votre forfait (de 7 à 90 jours selon votre abonnement)</li>
+                        </ul>
+                        <p class="text-gray-500 text-sm mt-3">
+                            Nous n'accédons pas, n'écoutons pas et ne révisons pas vos enregistrements audio.
+                        </p>
+                    </div>
+
+                    <!-- 1.3 Transcriptions and AI-Generated Content -->
+                    <div class="bg-gray-50 rounded-xl p-4">
+                        <h3 class="font-semibold text-gray-900 mb-2">1.3 Transcriptions et contenu généré par l'IA</h3>
+                        <p class="text-gray-600 text-sm mb-3">Lorsque vous enregistrez une réunion, nous générons et stockons :</p>
+                        <ul class="text-gray-600 text-sm space-y-1">
+                            <li><span class="text-[#92600a]">&#10003;</span> <strong>Transcriptions</strong> — conversion texte de votre audio avec identification des intervenants</li>
+                            <li><span class="text-[#92600a]">&#10003;</span> <strong>Analyse générée par l'IA</strong> — résumés, éléments d'action, mots-clés, moments clés et analyse de sentiment</li>
+                            <li><span class="text-[#92600a]">&#10003;</span> <strong>Historique du Chat IA</strong> — questions que vous posez et réponses générées sur vos réunions</li>
+                        </ul>
+                    </div>
+
+                    <!-- 1.4 Usage Data -->
+                    <div class="bg-gray-50 rounded-xl p-4">
+                        <h3 class="font-semibold text-gray-900 mb-2">1.4 Données d'utilisation</h3>
+                        <p class="text-gray-600 text-sm mb-3">Nous enregistrons les métriques d'utilisation pour appliquer les limites d'abonnement :</p>
+                        <ul class="text-gray-600 text-sm space-y-1">
+                            <li><span class="text-[#92600a]">&#10003;</span> Minutes audio enregistrées par mois</li>
+                            <li><span class="text-[#92600a]">&#10003;</span> Nombre d'utilisations des fonctionnalités IA par mois</li>
+                            <li><span class="text-[#92600a]">&#10003;</span> Nombre de téléchargements audio par mois</li>
+                        </ul>
+                        <p class="text-gray-500 text-sm mt-3">
+                            Ces données sont stockées dans votre profil utilisateur et ne sont pas partagées avec des tiers.
+                        </p>
+                    </div>
+
+                    <!-- 1.5 Subscription Information -->
+                    <div class="bg-gray-50 rounded-xl p-4">
+                        <h3 class="font-semibold text-gray-900 mb-2">1.5 Informations d'abonnement</h3>
+                        <p class="text-gray-600 text-sm">Si vous achetez un abonnement, Apple traite le paiement. Nous recevons votre plan d'abonnement, son statut et ses dates. Nous ne recevons pas votre moyen de paiement ni votre adresse de facturation.</p>
+                    </div>
+
+                    <!-- 1.6 Information We Do NOT Collect (green callout) -->
+                    <div class="bg-green-50 border border-green-200 rounded-xl p-4">
+                        <h3 class="font-semibold text-green-900 mb-2">1.6 Informations que nous NE collectons PAS</h3>
+                        <ul class="text-green-800 text-sm space-y-1">
+                            <li><span class="text-[#92600a]">&#10003;</span> Nous <strong>ne</strong> collectons <strong>pas</strong> votre localisation</li>
+                            <li><span class="text-[#92600a]">&#10003;</span> Nous <strong>ne</strong> collectons <strong>pas</strong> vos contacts</li>
+                            <li><span class="text-[#92600a]">&#10003;</span> Nous <strong>n'utilisons pas</strong> d'identifiants publicitaires (IDFA)</li>
+                            <li><span class="text-[#92600a]">&#10003;</span> Nous <strong>n'utilisons pas</strong> de SDKs d'analyse</li>
+                            <li><span class="text-[#92600a]">&#10003;</span> Nous <strong>ne</strong> vous <strong>suivons pas</strong> à travers les applications ou sites web</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 2: How We Use Your Information -->
+            <div class="bg-white rounded-2xl border border-gray-200 p-8 mb-8 shadow-sm">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">2. Comment nous utilisons vos informations</h2>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Nous traitons vos données strictement aux fins suivantes :
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-4 mb-6">
+                    <div class="border border-gray-200 rounded-xl p-4">
+                        <div class="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center mb-3">
+                            <svg class="w-5 h-5 text-[#92600a]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-1">Service de transcription</h3>
+                        <p class="text-gray-600 text-sm">Enregistrements audio envoyés à AssemblyAI pour le traitement de la voix en texte.</p>
+                    </div>
+
+                    <div class="border border-gray-200 rounded-xl p-4">
+                        <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mb-3">
+                            <svg class="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-1">Analyse IA</h3>
+                        <p class="text-gray-600 text-sm">Texte de transcription envoyé à Anthropic Claude pour les résumés, éléments d'action et analyses.</p>
+                    </div>
+
+                    <div class="border border-gray-200 rounded-xl p-4">
+                        <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mb-3">
+                            <svg class="w-5 h-5 text-green-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-1">Authentification</h3>
+                        <p class="text-gray-600 text-sm">E-mail, nom et jetons d'authentification pour vérifier votre identité.</p>
+                    </div>
+
+                    <div class="border border-gray-200 rounded-xl p-4">
+                        <div class="w-10 h-10 bg-amber-100 rounded-lg flex items-center justify-center mb-3">
+                            <svg class="w-5 h-5 text-amber-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-1">Limites d'abonnement</h3>
+                        <p class="text-gray-600 text-sm">Compteurs d'utilisation (minutes, utilisations IA, téléchargements) pour appliquer les limites du forfait.</p>
+                    </div>
+
+                    <div class="border border-gray-200 rounded-xl p-4">
+                        <div class="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center mb-3">
+                            <svg class="w-5 h-5 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-1">Stockage des réunions</h3>
+                        <p class="text-gray-600 text-sm">Transcriptions, résumés, éléments d'action et autres données de réunions stockés pour votre consultation.</p>
+                    </div>
+
+                    <div class="border border-gray-200 rounded-xl p-4">
+                        <div class="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center mb-3">
+                            <svg class="w-5 h-5 text-red-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-gray-900 mb-1">Abonnements</h3>
+                        <p class="text-gray-600 text-sm">Statut d'abonnement reçu d'Apple pour la gestion du forfait.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-4">
+                    <p class="text-gray-700 text-sm">
+                        <strong>Nous n'utilisons pas vos données pour la publicité, le profilage ou la vente à des tiers.</strong>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Section 3: Third-Party Services -->
+            <div class="bg-white rounded-2xl border border-gray-200 p-8 mb-8 shadow-sm">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">3. Services tiers</h2>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    NotarIA utilise les services tiers suivants pour fonctionner. Chaque service ne reçoit que les données minimales nécessaires à sa fonction :
+                </p>
+
+                <div class="space-y-4 mb-6">
+                    <!-- Firebase Authentication -->
+                    <div class="flex items-start gap-4 p-4 border border-gray-200 rounded-xl">
+                        <div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center shrink-0">
+                            <span class="text-orange-600 font-bold text-sm">G</span>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-900">Firebase Authentication</h3>
+                            <p class="text-gray-500 text-xs mb-1">Google LLC</p>
+                            <p class="text-gray-600 text-sm">Authentification des utilisateurs (e-mail, connexion Google, connexion Apple). Reçoit l'e-mail, le nom et les jetons d'authentification.</p>
+                        </div>
+                    </div>
+
+                    <!-- Firebase Firestore -->
+                    <div class="flex items-start gap-4 p-4 border border-gray-200 rounded-xl">
+                        <div class="w-12 h-12 bg-yellow-100 rounded-xl flex items-center justify-center shrink-0">
+                            <span class="text-yellow-600 font-bold text-sm">G</span>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-900">Firebase Firestore</h3>
+                            <p class="text-gray-500 text-xs mb-1">Google LLC</p>
+                            <p class="text-gray-600 text-sm">Stockage de données pour les données de réunions, les profils utilisateur et les compteurs d'utilisation.</p>
+                        </div>
+                    </div>
+
+                    <!-- Firebase Storage -->
+                    <div class="flex items-start gap-4 p-4 border border-gray-200 rounded-xl">
+                        <div class="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center shrink-0">
+                            <span class="text-orange-600 font-bold text-sm">G</span>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-900">Firebase Storage</h3>
+                            <p class="text-gray-500 text-xs mb-1">Google LLC</p>
+                            <p class="text-gray-600 text-sm">Stockage audio temporaire. Les fichiers sont automatiquement supprimés selon la politique de rétention de votre forfait.</p>
+                        </div>
+                    </div>
+
+                    <!-- Firebase Cloud Functions -->
+                    <div class="flex items-start gap-4 p-4 border border-gray-200 rounded-xl">
+                        <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center shrink-0">
+                            <span class="text-amber-600 font-bold text-sm">G</span>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-900">Firebase Cloud Functions</h3>
+                            <p class="text-gray-500 text-xs mb-1">Google LLC</p>
+                            <p class="text-gray-600 text-sm">Traitement côté serveur et orchestration d'API. Traite les fichiers audio et le texte de transcription.</p>
+                        </div>
+                    </div>
+
+                    <!-- AssemblyAI -->
+                    <div class="flex items-start gap-4 p-4 border border-gray-200 rounded-xl">
+                        <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center shrink-0">
+                            <span class="text-blue-600 font-bold text-sm">A</span>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-900">AssemblyAI</h3>
+                            <p class="text-gray-500 text-xs mb-1">AssemblyAI Inc.</p>
+                            <p class="text-gray-600 text-sm">Transcription de la voix en texte avec identification des intervenants. Reçoit les fichiers audio.</p>
+                        </div>
+                    </div>
+
+                    <!-- Anthropic Claude -->
+                    <div class="flex items-start gap-4 p-4 border border-gray-200 rounded-xl">
+                        <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center shrink-0">
+                            <span class="text-[#92600a] font-bold text-sm">C</span>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-900">Anthropic Claude</h3>
+                            <p class="text-gray-500 text-xs mb-1">Anthropic PBC</p>
+                            <p class="text-gray-600 text-sm">Analyse IA incluant résumés, éléments d'action, mots-clés, moments clés, sentiment et chat. Reçoit le texte de transcription.</p>
+                        </div>
+                    </div>
+
+                    <!-- Apple StoreKit -->
+                    <div class="flex items-start gap-4 p-4 border border-gray-200 rounded-xl">
+                        <div class="w-12 h-12 bg-gray-100 rounded-xl flex items-center justify-center shrink-0">
+                            <span class="text-gray-600 font-bold text-sm">&#127822;</span>
+                        </div>
+                        <div>
+                            <h3 class="font-semibold text-gray-900">Apple StoreKit</h3>
+                            <p class="text-gray-500 text-xs mb-1">Apple Inc.</p>
+                            <p class="text-gray-600 text-sm">Traitement des abonnements intégrés à l'application. Reçoit les données d'achat d'abonnement.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- On-Device Translation (green callout) -->
+                <div class="bg-green-50 border border-green-200 rounded-xl p-4 mb-6">
+                    <p class="text-green-800 text-sm">
+                        <strong>Traduction sur l'appareil :</strong> La fonction de traduction en direct de NotarIA utilise l'Apple Translation Framework, qui s'exécute entièrement sur votre appareil. Aucune donnée de traduction n'est envoyée à un serveur. Cette fonctionnalité a zéro collecte de données.
+                    </p>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-4">
+                    <p class="text-gray-700 text-sm">
+                        Nous n'utilisons pas de réseaux publicitaires, de plateformes d'analyse ou de services de suivi.
+                    </p>
+                </div>
+
+                <!-- 3.1 Services d'IA Tiers -->
+                <div class="mt-6">
+                    <h3 class="text-lg font-semibold text-[#92600a] mb-4">3.1 Services d'IA Tiers</h3>
+                    <p class="text-gray-600 text-sm mb-4">NotarIA utilise les services tiers suivants pour traiter les données de vos réunions :</p>
+
+                    <div class="space-y-4 mb-4">
+                        <div class="bg-gray-50 rounded-xl p-4">
+                            <h4 class="font-semibold text-gray-900 mb-2">1. AssemblyAI (<a href="https://www.assemblyai.com" target="_blank" rel="noopener noreferrer" class="text-[#92600a] hover:underline">assemblyai.com</a>)</h4>
+                            <ul class="text-gray-600 text-sm space-y-1">
+                                <li><span class="text-[#92600a]">&#10003;</span> <strong>Reçoit :</strong> Enregistrements audio</li>
+                                <li><span class="text-[#92600a]">&#10003;</span> <strong>Objectif :</strong> Transcription vocale en texte et identification des intervenants</li>
+                                <li><span class="text-[#92600a]">&#10003;</span> <strong>Politique de Confidentialité :</strong> <a href="https://www.assemblyai.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" class="text-[#92600a] hover:underline">assemblyai.com/legal/privacy-policy</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-gray-50 rounded-xl p-4">
+                            <h4 class="font-semibold text-gray-900 mb-2">2. Anthropic (<a href="https://www.anthropic.com" target="_blank" rel="noopener noreferrer" class="text-[#92600a] hover:underline">anthropic.com</a>)</h4>
+                            <ul class="text-gray-600 text-sm space-y-1">
+                                <li><span class="text-[#92600a]">&#10003;</span> <strong>Reçoit :</strong> Texte de transcription</li>
+                                <li><span class="text-[#92600a]">&#10003;</span> <strong>Objectif :</strong> Générer des résumés, éléments d'action, moments clés, mots-clés et analyse de sentiment</li>
+                                <li><span class="text-[#92600a]">&#10003;</span> <strong>Politique de Confidentialité :</strong> <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener noreferrer" class="text-[#92600a] hover:underline">anthropic.com/privacy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="bg-blue-50 border border-blue-200 rounded-xl p-4">
+                        <p class="text-blue-800 text-sm">
+                            Vos données sont transmises de manière sécurisée via des connexions chiffrées (HTTPS/TLS). Ces services traitent vos données uniquement pour fournir les fonctionnalités demandées et n'utilisent pas vos données pour entraîner leurs modèles d'IA dans le cadre de nos accords commerciaux d'API.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 4: Data Storage and Retention -->
+            <div class="bg-white rounded-2xl border border-gray-200 p-8 mb-8 shadow-sm">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">4. Stockage et rétention des données</h2>
+
+                <!-- 4.1 Where Your Data Is Stored -->
+                <h3 class="text-lg font-semibold text-[#92600a] mb-3">4.1 Où vos données sont stockées</h3>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Vos données sont stockées sur des serveurs Firebase (Google Cloud Platform) situés aux États-Unis.
+                </p>
+
+                <!-- 4.2 Audio Retention -->
+                <h3 class="text-lg font-semibold text-[#92600a] mb-3">4.2 Rétention audio</h3>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    Les fichiers audio stockés dans le cloud sont automatiquement supprimés selon votre forfait d'abonnement :
+                </p>
+
+                <div class="grid grid-cols-2 md:grid-cols-5 gap-3 mb-4">
+                    <div class="bg-gray-50 rounded-xl p-4 text-center">
+                        <p class="text-xl font-bold text-gray-900">7 jours</p>
+                        <p class="text-gray-500 text-xs mt-1">Starter (Gratuit)</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-4 text-center">
+                        <p class="text-xl font-bold text-gray-900">14 jours</p>
+                        <p class="text-gray-500 text-xs mt-1">Pro</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-4 text-center">
+                        <p class="text-xl font-bold text-gray-900">30 jours</p>
+                        <p class="text-gray-500 text-xs mt-1">Plus</p>
+                    </div>
+                    <div class="bg-gray-50 rounded-xl p-4 text-center">
+                        <p class="text-xl font-bold text-gray-900">60 jours</p>
+                        <p class="text-gray-500 text-xs mt-1">Business</p>
+                    </div>
+                    <div class="bg-amber-50 rounded-xl p-4 text-center">
+                        <p class="text-xl font-bold text-[#92600a]">90 jours</p>
+                        <p class="text-gray-500 text-xs mt-1">Enterprise</p>
+                    </div>
+                </div>
+
+                <p class="text-gray-500 text-sm mb-6">
+                    Une Cloud Function automatisée s'exécute quotidiennement pour supprimer les fichiers audio expirés. Après la suppression, l'audio ne peut pas être récupéré.
+                </p>
+
+                <!-- 4.3 Meeting Data Retention -->
+                <h3 class="text-lg font-semibold text-[#92600a] mb-3">4.3 Rétention des données de réunions</h3>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Les données de réunion textuelles sont conservées tant que votre compte est actif. Vous pouvez supprimer des réunions individuelles ou toutes les données à tout moment.
+                </p>
+
+                <!-- 4.4 Account Deletion -->
+                <h3 class="text-lg font-semibold text-[#92600a] mb-3">4.4 Suppression de compte</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    Vous pouvez supprimer votre compte à tout moment (<strong>Paramètres &gt; Supprimer le Compte</strong>). Cela supprime définitivement toutes vos données et est irréversible.
+                </p>
+            </div>
+
+            <!-- Section 5: Data Security -->
+            <div class="bg-white rounded-2xl border border-gray-200 p-8 mb-8 shadow-sm">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">5. Sécurité des données</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    Nous mettons en œuvre des mesures de sécurité incluant : Protection des Clés API via Firebase Secret Manager, vérification iOS App Attest, limitation de débit, jetons temporaires, chiffrement TLS/HTTPS, Règles de Sécurité Firebase et restrictions de Chat IA.
+                </p>
+            </div>
+
+            <!-- Section 6: Your Rights and Choices -->
+            <div class="bg-white rounded-2xl border border-gray-200 p-8 mb-8 shadow-sm">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6">6. Vos droits et options</h2>
+
+                <!-- 6.1 Access and Export -->
+                <h3 class="text-lg font-semibold text-[#92600a] mb-3">6.1 Accès et exportation</h3>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Vous pouvez consulter, exporter (PDF), télécharger (audio) et partager les données de vos réunions à tout moment depuis l'App.
+                </p>
+
+                <!-- 6.2 Deletion -->
+                <h3 class="text-lg font-semibold text-[#92600a] mb-3">6.2 Suppression</h3>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Supprimez des réunions individuelles ou l'intégralité de votre compte et données associées (Paramètres &gt; Supprimer le Compte).
+                </p>
+
+                <!-- 6.3 Control -->
+                <h3 class="text-lg font-semibold text-[#92600a] mb-3">6.3 Contrôle</h3>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Vous choisissez d'activer la transcription en direct, l'analyse IA, votre langue préférée, et pouvez modifier les noms des intervenants ou annuler votre abonnement à tout moment.
+                </p>
+
+                <!-- 6.4 EEA -->
+                <div class="bg-gray-50 rounded-xl p-4 mb-4">
+                    <h3 class="font-semibold text-gray-900 mb-2">6.4 Pour les utilisateurs de l'Espace économique européen (EEE)</h3>
+                    <p class="text-gray-600 text-sm">
+                        Si vous vous trouvez dans l'EEE, vous disposez de droits supplémentaires en vertu du RGPD, notamment le droit d'accéder, de rectifier, de porter et d'effacer vos données personnelles, ainsi que le droit de restreindre ou de vous opposer à certains traitements. Contact : <a href="mailto:legal@ravencorex.com" class="text-[#92600a] hover:underline">legal@ravencorex.com</a>
+                    </p>
+                </div>
+
+                <!-- 6.5 California -->
+                <div class="bg-gray-50 rounded-xl p-4">
+                    <h3 class="font-semibold text-gray-900 mb-2">6.5 Pour les utilisateurs en Californie (États-Unis)</h3>
+                    <p class="text-gray-600 text-sm">
+                        Si vous êtes résident de Californie, vous disposez de droits en vertu de la CCPA, notamment le droit de savoir quelles informations personnelles nous collectons, le droit de demander leur suppression et le droit de refuser la vente d'informations personnelles. <strong>Nous ne vendons pas vos informations personnelles.</strong> Contact : <a href="mailto:legal@ravencorex.com" class="text-[#92600a] hover:underline">legal@ravencorex.com</a>
+                    </p>
+                </div>
+            </div>
+
+            <!-- Section 7: Children's Privacy (amber callout) -->
+            <div class="bg-amber-50 border border-amber-200 rounded-2xl p-8 mb-8">
+                <h2 class="text-2xl font-bold text-amber-900 mb-4">7. Confidentialité des mineurs</h2>
+                <p class="text-amber-800 leading-relaxed">
+                    NotarIA ne s'adresse pas aux enfants de moins de 13 ans. Nous ne collectons pas sciemment d'informations auprès d'enfants.
+                </p>
+            </div>
+
+            <!-- Section 8: Subscriptions -->
+            <div class="bg-white rounded-2xl border border-gray-200 p-8 mb-8 shadow-sm">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">8. Abonnements</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    Le paiement est traité par Apple. Les abonnements se renouvellent automatiquement sauf annulation au moins 24 heures avant la fin de la période en cours. Gérez les abonnements dans <strong>Réglages &gt; Apple ID &gt; Abonnements</strong>.
+                </p>
+            </div>
+
+            <!-- Section 9: Changes to This Privacy Policy -->
+            <div class="bg-white rounded-2xl border border-gray-200 p-8 mb-8 shadow-sm">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">9. Modifications de cette politique de confidentialité</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    Nous pouvons mettre à jour cette politique et vous informerons des modifications importantes via l'App ou par e-mail.
+                </p>
+            </div>
+
+            <!-- Section 10: Contact Us -->
+            <div class="bg-white rounded-2xl border border-gray-200 p-8 mb-8 shadow-sm">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">10. Nous contacter</h2>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Si vous avez des questions, des préoccupations ou des demandes concernant cette Politique de confidentialité ou nos pratiques en matière de données, veuillez nous contacter :
+                </p>
+
+                <div class="bg-gray-50 rounded-xl p-4">
+                    <p class="text-gray-700 mb-4">
+                        <strong>Contact confidentialité :</strong>{" "}
+                        <a href="mailto:legal@ravencorex.com" class="text-[#92600a] hover:underline">
+                            legal@ravencorex.com
+                        </a>
+                    </p>
+                    <div class="text-gray-600 text-sm">
+                        <p class="font-semibold text-gray-700">RavencoreX LLC</p>
+                        <p>2 S Biscayne Boulevard, Suite 3200 #4821</p>
+                        <p>Miami, FL 33131</p>
+                        <p>United States</p>
+                    </div>
+                    <p class="text-gray-500 text-sm mt-4">
+                        Nous répondrons à votre demande dans un délai de 30 jours.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="text-center text-gray-500 text-sm pt-8 border-t border-gray-200">
+                <p>&copy; 2026 RavencoreX LLC. Tous droits réservés.</p>
+                <p class="mt-2">
+                    <a href="/fr" class="text-[#92600a] hover:underline">Accueil</a>
+                    <span class="mx-2">&bull;</span>
+                    <a href="/support" class="text-[#92600a] hover:underline">Support</a>
+                    <span class="mx-2">&bull;</span>
+                    <a href="/fr/terms" class="text-[#92600a] hover:underline">Conditions d'utilisation</a>
+                </p>
+            </div>
+        </div>
+    </section>
+</LayoutFr>
