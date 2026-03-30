@@ -35,7 +35,15 @@
       "Bash(script -q /dev/null npx astro build)",
       "Bash(echo:*)",
       "Bash(git checkout:*)",
-      "Bash(git add:*)"
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(gh auth:*)",
+      "Bash(ssh:*)",
+      "Bash(git remote:*)",
+      "Bash(for f in /Users/martinvelez/Documents/Remoto/Projects/RavenCoreX/Productos/github-ravencorex/notaria-web/src/pages/*/terms.astro)",
+      "Bash(do echo \"=== $f ===\")",
+      "Read(//Users/martinvelez/Documents/Remoto/Projects/RavenCoreX/Productos/github-ravencorex/notaria-web/**)"
     ]
   }
 }

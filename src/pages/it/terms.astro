@@ -4,7 +4,7 @@ import LayoutIt from '../../layouts/LayoutIt.astro';
 
 <LayoutIt
     title="Termini di Servizio - NotarIA"
-    description="Termini di Servizio di NotarIA. Leggi le nostre condizioni d'uso per l'app di registrazione e trascrizione delle riunioni."
+    description="Termini di Servizio di NotarIA. Leggi i nostri termini per l'utilizzo dell'app di trascrizione riunioni basata su IA."
     pagePath="/terms"
 >
     <section class="pt-32 pb-20 px-6 bg-gray-50 min-h-screen">
@@ -14,190 +14,482 @@ import LayoutIt from '../../layouts/LayoutIt.astro';
                 <h1 class="text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
                     Termini di Servizio
                 </h1>
-                <p class="text-gray-500 mb-2">Ultimo aggiornamento: 10 febbraio 2026</p>
-                <p class="text-gray-600 font-medium">Entità responsabile: RavencoreX LLC</p>
+                <p class="text-gray-600 font-medium mb-2">NotarIA — Trascrizione IA delle riunioni</p>
+                <p class="text-gray-500">In vigore dal: 10 febbraio 2026</p>
             </div>
 
-            <!-- Legal Disclaimer -->
-            <div class="bg-amber-50 border border-amber-200 rounded-2xl p-6 mb-8">
+            <!-- Intro / Agreement Callout -->
+            <div class="bg-blue-50 border border-blue-200 rounded-2xl p-6 mb-8">
                 <div class="flex items-start gap-3">
-                    <span class="text-2xl">⚠️</span>
+                    <span class="text-2xl">📋</span>
                     <div>
-                        <h2 class="font-bold text-amber-800 mb-2">AVVISO LEGALE</h2>
-                        <p class="text-amber-700 text-sm leading-relaxed">
-                            Questo documento è stato generato da un'IA a scopo informativo e di bozza legale. Non costituisce una consulenza legale formale. RavencoreX LLC deve far revisionare questo documento da un avvocato abilitato presso il Foro della Florida (Florida Bar) prima della pubblicazione ufficiale per garantire la piena conformità alle leggi locali e federali.
+                        <h2 class="font-bold text-blue-800 mb-2">ACCETTAZIONE DEI TERMINI</h2>
+                        <p class="text-blue-700 text-sm leading-relaxed">
+                            I presenti Termini di Servizio ("Termini") regolano l'accesso e l'utilizzo dell'applicazione mobile NotarIA ("l'App"), gestita da <strong>RavencoreX LLC</strong> ("noi", "ci" o "nostro"). Scaricando, installando o utilizzando l'App, accetti di essere vincolato dai presenti Termini. <strong>Se non accetti, non utilizzare l'App.</strong>
                         </p>
                     </div>
                 </div>
             </div>
 
-            <!-- Summary for Humans -->
-            <div class="bg-blue-50 border border-blue-200 rounded-2xl p-6 mb-8">
-                <div class="flex items-start gap-3">
-                    <span class="text-2xl">📋</span>
-                    <div>
-                        <h2 class="font-bold text-blue-800 mb-3">RIEPILOGO PER LE PERSONE</h2>
-                        <ul class="text-blue-700 text-sm space-y-3">
-                            <li>
-                                <strong>NotarIA</strong> è uno strumento di produttività di proprietà di RavencoreX LLC. Sei proprietario delle tue registrazioni, ma sei l'unico responsabile dell'ottenimento del permesso per registrare altre persone.
-                            </li>
-                            <li>
-                                <strong>Uso aziendale:</strong> Se utilizzi un indirizzo email aziendale, il tuo datore di lavoro/organizzazione può rivendicare il controllo del tuo account e dei tuoi dati.
-                            </li>
-                            <li>
-                                <strong>Limitazioni di responsabilità:</strong> La nostra responsabilità massima nei tuoi confronti è limitata all'importo che hai pagato negli ultimi 12 mesi, o 100 USD, a seconda di quale sia maggiore.
-                            </li>
-                            <li>
-                                <strong>Apple:</strong> Apple non è obbligata a fornire supporto tecnico per questa app; RavencoreX LLC è l'unico responsabile.
-                            </li>
-                            <li>
-                                <strong>Controversie:</strong> Accettiamo di risolvere i problemi tramite arbitrato individuale in Florida, rinunciando al diritto di partecipare ad azioni collettive.
-                            </li>
-                        </ul>
+            <!-- Section 1: Description of Service -->
+            <div class="bg-white rounded-2xl border border-gray-200 p-8 mb-8 shadow-sm">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">1. Descrizione del Servizio</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    NotarIA è un'applicazione mobile che registra l'audio di riunioni e conversazioni, li trascrive utilizzando l'intelligenza artificiale e genera analisi strutturate tra cui riassunti, azioni da intraprendere, parole chiave, momenti salienti, analisi del sentiment e un'interfaccia di chat basata su IA. L'App fornisce anche la traduzione in tempo reale sul dispositivo.
+                </p>
+            </div>
+
+            <!-- Section 2: Eligibility -->
+            <div class="bg-white rounded-2xl border border-gray-200 p-8 mb-8 shadow-sm">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">2. Idoneità</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    Devi avere almeno <strong>13 anni</strong> (o l'età applicabile per il consenso digitale nella tua giurisdizione) per creare un account e utilizzare l'App. Utilizzando l'App, dichiari di soddisfare questo requisito. Se hai meno di 18 anni, dichiari di avere il permesso di un genitore o tutore legale per utilizzare l'App.
+                </p>
+            </div>
+
+            <!-- Section 3: Account Registration -->
+            <div class="bg-white rounded-2xl border border-gray-200 p-8 mb-8 shadow-sm">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">3. Registrazione dell'Account</h2>
+
+                <h3 class="text-lg font-semibold text-[#92600a] mb-2">3.1 Creazione di un Account</h3>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    Per utilizzare l'App, devi creare un account utilizzando uno dei seguenti metodi: email e password, Accesso con Google o Accesso con Apple. Accetti di fornire informazioni accurate e di mantenere sicure le credenziali del tuo account.
+                </p>
+
+                <h3 class="text-lg font-semibold text-[#92600a] mb-2">3.2 Sicurezza dell'Account</h3>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    Sei responsabile di tutta l'attività che avviene sotto il tuo account. Se sospetti un accesso non autorizzato, contattaci immediatamente all'indirizzo <a href="mailto:legal@ravencorex.com" class="text-[#92600a] hover:underline">legal@ravencorex.com</a>. Non siamo responsabili per eventuali perdite derivanti dall'uso non autorizzato del tuo account.
+                </p>
+
+                <h3 class="text-lg font-semibold text-[#92600a] mb-2">3.3 Un Account per Utente</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    Ogni utente deve mantenere un solo account. Ci riserviamo il diritto di sospendere o terminare gli account duplicati.
+                </p>
+            </div>
+
+            <!-- Section 4: Subscriptions and Payments -->
+            <div class="bg-white rounded-2xl border border-gray-200 p-8 mb-8 shadow-sm">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">4. Abbonamenti e Pagamenti</h2>
+
+                <h3 class="text-lg font-semibold text-[#92600a] mb-2">4.1 Piani Gratuiti e a Pagamento</h3>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    L'App offre un livello gratuito (Starter) con funzionalità limitate e piani di abbonamento a pagamento (Pro, Plus, Business, Enterprise) con funzionalità aggiuntive e limiti di utilizzo più elevati.
+                </p>
+
+                <h3 class="text-lg font-semibold text-[#92600a] mb-4">4.2 Prezzi</h3>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
+                    <!-- Starter -->
+                    <div class="bg-gray-50 rounded-xl p-4 border border-gray-200 text-center">
+                        <p class="font-bold text-gray-900 text-lg mb-1">Starter</p>
+                        <p class="text-[#92600a] font-bold text-2xl">Gratuito</p>
+                        <p class="text-gray-500 text-sm mt-1">Nessun abbonamento richiesto</p>
+                    </div>
+                    <!-- Pro -->
+                    <div class="bg-gray-50 rounded-xl p-4 border border-gray-200 text-center">
+                        <p class="font-bold text-gray-900 text-lg mb-1">Pro</p>
+                        <p class="text-[#92600a] font-bold text-2xl">$9,99<span class="text-sm text-gray-500 font-normal">/mese</span></p>
+                        <p class="text-gray-500 text-sm mt-1">$99,99/anno</p>
+                    </div>
+                    <!-- Plus -->
+                    <div class="bg-gray-50 rounded-xl p-4 border border-gray-200 text-center">
+                        <p class="font-bold text-gray-900 text-lg mb-1">Plus</p>
+                        <p class="text-[#92600a] font-bold text-2xl">$14,99<span class="text-sm text-gray-500 font-normal">/mese</span></p>
+                        <p class="text-gray-500 text-sm mt-1">$149,99/anno</p>
+                    </div>
+                    <!-- Business -->
+                    <div class="bg-gray-50 rounded-xl p-4 border border-gray-200 text-center">
+                        <p class="font-bold text-gray-900 text-lg mb-1">Business</p>
+                        <p class="text-[#92600a] font-bold text-2xl">$19,99<span class="text-sm text-gray-500 font-normal">/mese</span></p>
+                        <p class="text-gray-500 text-sm mt-1">$199,99/anno</p>
+                    </div>
+                    <!-- Enterprise -->
+                    <div class="bg-gray-50 rounded-xl p-4 border border-gray-200 text-center">
+                        <p class="font-bold text-gray-900 text-lg mb-1">Enterprise</p>
+                        <p class="text-[#92600a] font-bold text-2xl">$29,99<span class="text-sm text-gray-500 font-normal">/mese</span></p>
+                        <p class="text-gray-500 text-sm mt-1">$299,99/anno</p>
                     </div>
                 </div>
-            </div>
+                <p class="text-gray-500 text-sm mb-6">
+                    I prezzi sono in USD. Apple potrebbe convertire i prezzi nella tua valuta locale. Ci riserviamo il diritto di modificare i prezzi con un ragionevole preavviso.
+                </p>
 
-            <!-- Section 1 -->
-            <div class="bg-white rounded-2xl border border-gray-200 p-8 mb-8 shadow-sm">
-                <h2 class="text-2xl font-bold text-gray-900 mb-4">1. Accettazione e idoneità</h2>
+                <h3 class="text-lg font-semibold text-[#92600a] mb-2">4.3 Fatturazione e Rinnovo</h3>
+                <ul class="text-gray-600 leading-relaxed space-y-2 mb-6">
+                    <li class="flex items-start gap-2">
+                        <span class="text-[#92600a] mt-0.5">•</span>
+                        <span>Tutti i pagamenti vengono elaborati da Apple tramite l'App Store. Non raccogliamo né conserviamo le tue informazioni di pagamento.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-[#92600a] mt-0.5">•</span>
+                        <span>Gli abbonamenti si rinnovano automaticamente.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-[#92600a] mt-0.5">•</span>
+                        <span>Devi annullare almeno 24 ore prima della fine del periodo corrente.</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-[#92600a] mt-0.5">•</span>
+                        <span>Puoi gestire o annullare il tuo abbonamento in <strong>Impostazioni → ID Apple → Abbonamenti</strong>.</span>
+                    </li>
+                </ul>
+
+                <h3 class="text-lg font-semibold text-[#92600a] mb-2">4.4 Rimborsi</h3>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Le richieste di rimborso sono gestite da Apple. Visita <a href="https://reportaproblem.apple.com" target="_blank" rel="noopener noreferrer" class="text-[#92600a] hover:underline">https://reportaproblem.apple.com</a>.
+                </p>
+
+                <h3 class="text-lg font-semibold text-[#92600a] mb-2">4.5 Prova Gratuita</h3>
                 <p class="text-gray-600 leading-relaxed">
-                    Scaricando, installando o utilizzando NotarIA, accetti questi termini. Devi avere almeno 13 anni per utilizzare il servizio. Se utilizzi il servizio per conto di un'organizzazione, dichiari e garantisci di avere l'autorità legale per vincolare tale organizzazione a questo accordo.
+                    Se offerta, la prova gratuita si converte in abbonamento a pagamento al prezzo indicato se non viene annullata.
                 </p>
             </div>
 
-            <!-- Section 2 -->
+            <!-- Section 5: Usage Limits -->
             <div class="bg-white rounded-2xl border border-gray-200 p-8 mb-8 shadow-sm">
-                <h2 class="text-2xl font-bold text-gray-900 mb-4">2. Account e sicurezza</h2>
-
-                <h3 class="text-lg font-semibold text-[#92600a] mb-2">Account aziendali</h3>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">5. Limiti di Utilizzo</h2>
                 <p class="text-gray-600 leading-relaxed mb-4">
-                    Se il tuo account è stato creato utilizzando un dominio email di un'organizzazione (es. nome@azienda.com), riconosci che tale organizzazione può gestire, limitare o rivendicare l'accesso al tuo account e ai dati in esso contenuti.
+                    Ogni piano ha limiti specifici tra cui:
                 </p>
-
-                <h3 class="text-lg font-semibold text-[#92600a] mb-2">Responsabilità</h3>
+                <ul class="text-gray-600 leading-relaxed space-y-2 mb-4">
+                    <li class="flex items-start gap-2">
+                        <span class="text-[#92600a] mt-0.5">•</span>
+                        <span>Minuti mensili</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-[#92600a] mt-0.5">•</span>
+                        <span>Durata massima per riunione</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-[#92600a] mt-0.5">•</span>
+                        <span>Utilizzi IA al mese</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-[#92600a] mt-0.5">•</span>
+                        <span>Download audio al mese</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-[#92600a] mt-0.5">•</span>
+                        <span>Periodo di conservazione audio</span>
+                    </li>
+                </ul>
                 <p class="text-gray-600 leading-relaxed">
-                    Sei responsabile della riservatezza della tua password e di tutte le attività che avvengono sotto il tuo account.
+                    Quando raggiungi un limite, la funzionalità non è disponibile fino al prossimo ciclo di fatturazione o all'upgrade.
                 </p>
             </div>
 
-            <!-- Section 3 -->
+            <!-- Section 6: Acceptable Use -->
             <div class="bg-white rounded-2xl border border-gray-200 p-8 mb-8 shadow-sm">
-                <h2 class="text-2xl font-bold text-gray-900 mb-4">3. Proprietà e licenza sui contenuti</h2>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">6. Uso Accettabile</h2>
 
-                <h3 class="text-lg font-semibold text-[#92600a] mb-2">I tuoi contenuti</h3>
-                <p class="text-gray-600 leading-relaxed mb-4">
-                    Mantieni tutti i diritti di proprietà sulle tue registrazioni audio e trascrizioni. Concedi a RavencoreX LLC una licenza limitata e gratuita esclusivamente per elaborare, conservare e trasmettere tali contenuti al fine di fornire il servizio.
-                </p>
+                <h3 class="text-lg font-semibold text-[#92600a] mb-3">6.1 Accetti di</h3>
+                <ul class="text-gray-600 leading-relaxed space-y-2 mb-6">
+                    <li class="flex items-start gap-2">
+                        <span class="text-green-600">✓</span>
+                        <span>Utilizzare l'App solo per scopi leciti</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-green-600">✓</span>
+                        <span>Ottenere tutti i consensi necessari prima di registrare</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-green-600">✓</span>
+                        <span>Rispettare tutte le leggi applicabili sul consenso alla registrazione</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-green-600">✓</span>
+                        <span>Rispettare i diritti di proprietà intellettuale</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-green-600">✓</span>
+                        <span>Mantenere riservate le credenziali dell'account</span>
+                    </li>
+                </ul>
 
-                <h3 class="text-lg font-semibold text-[#92600a] mb-2">Feedback</h3>
-                <p class="text-gray-600 leading-relaxed mb-4">
-                    Se invii suggerimenti o idee ("Feedback"), RavencoreX LLC può utilizzarli liberamente e permanentemente per migliorare l'applicazione, senza doverti alcun compenso.
-                </p>
-
-                <h3 class="text-lg font-semibold text-[#92600a] mb-2">Dati di utilizzo</h3>
-                <p class="text-gray-600 leading-relaxed">
-                    Possiamo raccogliere dati tecnici anonimizzati (log, report di errori, metriche di utilizzo) per migliorare i nostri algoritmi IA, a condizione che siano separati dai tuoi contenuti personali.
-                </p>
+                <h3 class="text-lg font-semibold text-[#92600a] mb-3">6.2 Accetti di NON</h3>
+                <ul class="text-gray-600 leading-relaxed space-y-2 mb-6">
+                    <li class="flex items-start gap-2">
+                        <span class="text-red-500">✗</span>
+                        <span>Registrare conversazioni senza il consenso richiesto</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-red-500">✗</span>
+                        <span>Utilizzare l'App per molestare, minacciare o danneggiare</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-red-500">✗</span>
+                        <span>Decompilare, disassemblare o eseguire il reverse engineering</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-red-500">✗</span>
+                        <span>Tentare di aggirare i limiti o le misure di sicurezza</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-red-500">✗</span>
+                        <span>Utilizzare strumenti automatizzati, bot o script</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-red-500">✗</span>
+                        <span>Condividere le credenziali dell'account</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-red-500">✗</span>
+                        <span>Elaborare contenuti illegali o diffamatori</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-red-500">✗</span>
+                        <span>Rivendere o ridistribuire commercialmente l'accesso</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-red-500">✗</span>
+                        <span>Accedere ai dati di altri utenti o interferire con l'infrastruttura</span>
+                    </li>
+                </ul>
             </div>
 
-            <!-- Section 4 - Critical -->
+            <!-- Section 6.3: Recording Consent - RED Critical Warning -->
             <div class="bg-red-50 border border-red-200 rounded-2xl p-8 mb-8">
-                <h2 class="text-2xl font-bold text-red-900 mb-4">4. Responsabilità per le registrazioni (CRITICO)</h2>
+                <h2 class="text-2xl font-bold text-red-900 mb-4">6.3 Consenso alla Registrazione (CRITICO)</h2>
 
                 <div class="bg-red-100 rounded-xl p-4 mb-4">
                     <p class="text-red-800 font-semibold">
-                        ⚠️ La Florida è uno stato che richiede il consenso di tutte le parti (Statute 934.03).
+                        ⚠️ La Florida è uno stato che richiede il "consenso di tutte le parti" (Statute 934.03).
                     </p>
                 </div>
 
                 <p class="text-red-800 leading-relaxed mb-4">
-                    L'utente garantisce e dichiara di aver ottenuto il consenso esplicito di tutti i partecipanti prima di avviare qualsiasi registrazione.
+                    <strong>Importante:</strong> Molte giurisdizioni richiedono il consenso di una o di tutte le parti prima di registrare una conversazione. Sei <strong>l'unico responsabile</strong> della determinazione e del rispetto di tutte le leggi applicabili sul consenso alla registrazione nella tua giurisdizione.
                 </p>
 
                 <p class="text-red-800 leading-relaxed font-medium">
-                    NotarIA non è responsabile per registrazioni illegali. Accetti di manlevare e tenere indenne RavencoreX LLC da qualsiasi reclamo di terzi derivante dalla tua violazione delle leggi sulla privacy o sulla registrazione.
+                    Non siamo responsabili per eventuali conseguenze legali derivanti dall'uso della funzione di registrazione. Accetti di manlevare e tenere indenne RavencoreX LLC da qualsiasi reclamo di terzi derivante dalla tua violazione delle leggi sulla privacy o sulla registrazione.
                 </p>
             </div>
 
-            <!-- Section 5 -->
+            <!-- Section 7: Intellectual Property -->
             <div class="bg-white rounded-2xl border border-gray-200 p-8 mb-8 shadow-sm">
-                <h2 class="text-2xl font-bold text-gray-900 mb-4">5. Limitazione di responsabilità</h2>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">7. Proprietà Intellettuale</h2>
+
+                <h3 class="text-lg font-semibold text-[#92600a] mb-2">7.1 La Nostra Proprietà Intellettuale</h3>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    L'App è di proprietà di RavencoreX LLC. Ti viene concessa una licenza limitata, non esclusiva, non trasferibile e revocabile per utilizzare l'App in conformità con i presenti Termini.
+                </p>
+
+                <h3 class="text-lg font-semibold text-[#92600a] mb-2">7.2 I Tuoi Contenuti</h3>
+                <p class="text-gray-600 leading-relaxed mb-2">
+                    Mantieni la proprietà di tutti i contenuti che crei tramite l'App. Ci viene concessa una licenza limitata esclusivamente per fornire il servizio. Assumiamo i seguenti impegni:
+                </p>
+                <ul class="text-gray-600 leading-relaxed space-y-2 mb-4">
+                    <li class="flex items-start gap-2">
+                        <span class="text-[#92600a]">✓</span>
+                        <span><strong>Non</strong> rivendichiamo la proprietà dei tuoi contenuti</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-[#92600a]">✓</span>
+                        <span><strong>Non</strong> utilizziamo i tuoi contenuti per addestrare modelli IA</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-[#92600a]">✓</span>
+                        <span>I tuoi contenuti <strong>non</strong> vengono condivisi con altri utenti</span>
+                    </li>
+                </ul>
+
+                <h3 class="text-lg font-semibold text-[#92600a] mb-2">7.3 Contenuti Generati dall'IA</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    Riassunti, azioni da intraprendere e altri output generati dall'IA sono prodotti dall'intelligenza artificiale. Puoi utilizzarli, modificarli e distribuirli liberamente. Tuttavia, non garantiamo la loro accuratezza.
+                </p>
+            </div>
+
+            <!-- Section 8: Privacy -->
+            <div class="bg-white rounded-2xl border border-gray-200 p-8 mb-8 shadow-sm">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">8. Privacy</h2>
+                <p class="text-gray-600 leading-relaxed">
+                    La tua privacy è regolata dalla nostra <a href="/it/privacy" class="text-[#92600a] hover:underline">Informativa sulla Privacy</a>. Utilizzando l'App, acconsenti alle pratiche di raccolta e trattamento dei dati ivi descritte.
+                </p>
+            </div>
+
+            <!-- Section 9: Data Deletion -->
+            <div class="bg-white rounded-2xl border border-gray-200 p-8 mb-8 shadow-sm">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">9. Cancellazione dei Dati</h2>
+
+                <h3 class="text-lg font-semibold text-[#92600a] mb-2">9.1 Eliminazione delle Riunioni</h3>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    Puoi eliminare singole riunioni in qualsiasi momento. Questo rimuove permanentemente l'audio, la trascrizione e tutti i dati associati.
+                </p>
+
+                <h3 class="text-lg font-semibold text-[#92600a] mb-2">9.2 Eliminazione del Tuo Account</h3>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    Vai su <strong>Impostazioni → Elimina Account</strong> per rimuovere permanentemente tutti i tuoi dati. Questa azione è immediata e irreversibile.
+                </p>
+
+                <h3 class="text-lg font-semibold text-[#92600a] mb-2">9.3 Annullamento dell'Abbonamento</h3>
+                <div class="bg-amber-50 border border-amber-200 rounded-xl p-4">
+                    <div class="flex items-start gap-3">
+                        <span class="text-xl">⚠️</span>
+                        <p class="text-amber-700 text-sm leading-relaxed">
+                            <strong>Importante:</strong> L'eliminazione del tuo account <strong>NON</strong> annulla il tuo abbonamento Apple. Devi annullare il tuo abbonamento separatamente tramite <strong>Impostazioni → ID Apple → Abbonamenti</strong>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 10: Disclaimers -->
+            <div class="bg-white rounded-2xl border border-gray-200 p-8 mb-8 shadow-sm">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">10. Esclusioni di Garanzia</h2>
+
+                <h3 class="text-lg font-semibold text-[#92600a] mb-2">10.1 Servizio Fornito "Così Com'è"</h3>
+                <p class="text-gray-600 leading-relaxed uppercase text-sm font-medium mb-4">
+                    L'APP VIENE FORNITA "COSÌ COM'È" E "COME DISPONIBILE" SENZA GARANZIE DI ALCUN TIPO, ESPLICITE O IMPLICITE, INCLUSE MA NON LIMITATE ALLE GARANZIE IMPLICITE DI COMMERCIABILITÀ, IDONEITÀ PER UNO SCOPO PARTICOLARE E NON VIOLAZIONE.
+                </p>
+
+                <h3 class="text-lg font-semibold text-[#92600a] mb-2">10.2 Accuratezza della Trascrizione e dell'IA</h3>
+                <p class="text-gray-600 leading-relaxed uppercase text-sm font-medium mb-4">
+                    NON GARANTIAMO TRASCRIZIONI ACCURATE AL 100%. I CONTENUTI GENERATI DALL'IA, INCLUSI RIASSUNTI, AZIONI DA INTRAPRENDERE E ANALISI, POSSONO CONTENERE ERRORI, OMISSIONI O INESATTEZZE.
+                </p>
+
+                <h3 class="text-lg font-semibold text-[#92600a] mb-2">10.3 Disponibilità del Servizio</h3>
+                <p class="text-gray-600 leading-relaxed uppercase text-sm font-medium mb-4">
+                    NON GARANTIAMO IL FUNZIONAMENTO ININTERROTTO O PRIVO DI ERRORI DELL'APP. IL SERVIZIO DIPENDE DA SERVIZI E INFRASTRUTTURE DI TERZE PARTI AL DI FUORI DEL NOSTRO CONTROLLO.
+                </p>
+
+                <h3 class="text-lg font-semibold text-[#92600a] mb-2">10.4 Traduzione</h3>
+                <p class="text-gray-600 leading-relaxed uppercase text-sm font-medium">
+                    LA TRADUZIONE IN TEMPO REALE VIENE ESEGUITA SUL DISPOSITIVO TRAMITE IL FRAMEWORK DI TRADUZIONE APPLE. NON SIAMO RESPONSABILI PER ERRORI O INESATTEZZE NELLA TRADUZIONE.
+                </p>
+            </div>
+
+            <!-- Section 11: Limitation of Liability -->
+            <div class="bg-white rounded-2xl border border-gray-200 p-8 mb-8 shadow-sm">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">11. Limitazione di Responsabilità</h2>
 
                 <p class="text-gray-600 leading-relaxed uppercase text-sm font-medium">
-                    NELLA MISURA MASSIMA CONSENTITA DALLA LEGGE DELLO STATO DELLA FLORIDA, RAVENCOREX LLC NON SARÀ RESPONSABILE PER DANNI INDIRETTI, INCIDENTALI, SPECIALI O CONSEQUENZIALI. LA NOSTRA RESPONSABILITÀ CUMULATIVA TOTALE NON SUPERERÀ IL MAGGIORE TRA: (A) L'IMPORTO TOTALE PAGATO NEI 12 MESI PRECEDENTI L'EVENTO DANNOSO, O (B) 100 USD.
+                    NELLA MISURA MASSIMA CONSENTITA DALLA LEGGE, RAVENCOREX LLC NON SARÀ RESPONSABILE PER DANNI INDIRETTI, INCIDENTALI, SPECIALI, CONSEQUENZIALI O PUNITIVI, INCLUSI MA NON LIMITATI A PERDITA DI PROFITTI, DATI, USO, AVVIAMENTO O ALTRE PERDITE IMMATERIALI, DERIVANTI DA O RELATIVI ALL'UTILIZZO DELL'APP. LA NOSTRA RESPONSABILITÀ AGGREGATA TOTALE NON SUPERERÀ L'IMPORTO DA TE PAGATO NEI DODICI (12) MESI PRECEDENTI IL RECLAMO, O CENTO DOLLARI ($100 USD), A SECONDA DI QUALE SIA MAGGIORE.
                 </p>
             </div>
 
-            <!-- Section 6 - Apple -->
-            <div class="bg-gray-100 rounded-2xl border border-gray-300 p-8 mb-8">
-                <h2 class="text-2xl font-bold text-gray-900 mb-4">6. Avviso specifico per Apple (Obbligatorio)</h2>
-
+            <!-- Section 12: Indemnification -->
+            <div class="bg-white rounded-2xl border border-gray-200 p-8 mb-8 shadow-sm">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">12. Manleva</h2>
                 <p class="text-gray-600 leading-relaxed mb-4">
-                    Riconosci che questo accordo è stipulato esclusivamente tra te e RavencoreX LLC e non con Apple Inc.
+                    Accetti di manlevare, difendere e tenere indenne RavencoreX LLC, i suoi dirigenti, amministratori, dipendenti e agenti da e contro qualsiasi reclamo, responsabilità, danno, perdita e spesa derivante da:
+                </p>
+                <ul class="text-gray-600 leading-relaxed space-y-2">
+                    <li class="flex items-start gap-2">
+                        <span class="text-gray-400 font-semibold">(a)</span>
+                        <span>Il tuo utilizzo dell'App</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-gray-400 font-semibold">(b)</span>
+                        <span>La tua violazione dei presenti Termini</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-gray-400 font-semibold">(c)</span>
+                        <span>La tua violazione di qualsiasi legge applicabile, incluse le leggi sul consenso alla registrazione</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <span class="text-gray-400 font-semibold">(d)</span>
+                        <span>I tuoi contenuti</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Section 13: Termination -->
+            <div class="bg-white rounded-2xl border border-gray-200 p-8 mb-8 shadow-sm">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">13. Risoluzione</h2>
+
+                <h3 class="text-lg font-semibold text-[#92600a] mb-2">13.1 Da Parte Tua</h3>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    Puoi smettere di utilizzare l'App ed eliminare il tuo account in qualsiasi momento.
                 </p>
 
-                <h3 class="text-lg font-semibold text-gray-800 mb-2">Supporto</h3>
+                <h3 class="text-lg font-semibold text-[#92600a] mb-2">13.2 Da Parte Nostra</h3>
                 <p class="text-gray-600 leading-relaxed mb-4">
-                    Apple non è obbligata a fornire servizi di manutenzione o supporto per NotarIA.
+                    Possiamo sospendere o terminare il tuo account se violi i presenti Termini o se adotti una condotta che determiniamo, a nostra esclusiva discrezione, essere dannosa per l'App, gli altri utenti o RavencoreX LLC.
                 </p>
 
-                <h3 class="text-lg font-semibold text-gray-800 mb-2">Garanzia</h3>
-                <p class="text-gray-600 leading-relaxed mb-4">
-                    In caso di violazione di una garanzia applicabile, puoi notificare Apple per ottenere un rimborso del prezzo di acquisto; tuttavia, nella misura massima consentita dalla legge, Apple non ha ulteriori obblighi di garanzia.
-                </p>
-
-                <h3 class="text-lg font-semibold text-gray-800 mb-2">Reclami</h3>
+                <h3 class="text-lg font-semibold text-[#92600a] mb-2">13.3 Effetti della Risoluzione</h3>
                 <p class="text-gray-600 leading-relaxed">
-                    RavencoreX LLC, e non Apple, è responsabile della gestione di qualsiasi reclamo relativo all'applicazione, inclusa la responsabilità del prodotto, la conformità normativa o la violazione della proprietà intellettuale.
+                    In caso di risoluzione, potremmo eliminare i tuoi dati. Le Sezioni 7 (Proprietà Intellettuale), 10 (Esclusioni di Garanzia), 11 (Limitazione di Responsabilità), 12 (Manleva), 14 (Legge Applicabile e Risoluzione delle Controversie) e 15 (Disposizioni Generali) sopravvivranno alla risoluzione.
                 </p>
             </div>
 
-            <!-- Section 7 -->
+            <!-- Section 14: Governing Law and Dispute Resolution -->
             <div class="bg-white rounded-2xl border border-gray-200 p-8 mb-8 shadow-sm">
-                <h2 class="text-2xl font-bold text-gray-900 mb-4">7. Risoluzione delle controversie e arbitrato</h2>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">14. Legge Applicabile e Risoluzione delle Controversie</h2>
 
+                <h3 class="text-lg font-semibold text-[#92600a] mb-2">14.1 Legge Applicabile</h3>
                 <p class="text-gray-600 leading-relaxed mb-4">
-                    Qualsiasi controversia derivante da o in relazione a questi termini sarà risolta tramite arbitrato individuale vincolante nello Stato della Florida, USA.
+                    I presenti Termini sono regolati e interpretati in conformità con le leggi dello <strong>Stato della Florida, USA</strong>, senza riguardo ai principi sul conflitto di leggi.
                 </p>
 
-                <p class="text-gray-800 leading-relaxed font-semibold uppercase text-sm">
-                    RINUNCI ESPRESSAMENTE AL DIRITTO DI PARTECIPARE AD AZIONI COLLETTIVE O A PROCESSI CON GIURIA.
+                <h3 class="text-lg font-semibold text-[#92600a] mb-2">14.2 Risoluzione delle Controversie</h3>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Qualsiasi controversia derivante dai presenti Termini sarà prima affrontata tramite negoziazione in buona fede. Se non risolta, la controversia sarà definita mediante arbitrato vincolante amministrato dall'American Arbitration Association (AAA) a Miami, Florida.
+                </p>
+
+                <h3 class="text-lg font-semibold text-[#92600a] mb-2">14.3 Rinuncia all'Azione Collettiva</h3>
+                <p class="text-gray-800 leading-relaxed font-bold uppercase text-sm">
+                    ACCETTI CHE QUALSIASI PROCEDIMENTO DI RISOLUZIONE DELLE CONTROVERSIE SARÀ CONDOTTO ESCLUSIVAMENTE SU BASE INDIVIDUALE E NON IN FORMA DI AZIONE COLLETTIVA, CONSOLIDATA O RAPPRESENTATIVA. RINUNCI ESPRESSAMENTE AL DIRITTO DI PARTECIPARE AD AZIONI COLLETTIVE O AD ARBITRATO SU BASE COLLETTIVA.
                 </p>
             </div>
 
-            <!-- Section 8 -->
+            <!-- Section 15: General Provisions -->
             <div class="bg-white rounded-2xl border border-gray-200 p-8 mb-8 shadow-sm">
-                <h2 class="text-2xl font-bold text-gray-900 mb-4">8. Legge applicabile</h2>
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">15. Disposizioni Generali</h2>
 
-                <p class="text-gray-600 leading-relaxed mb-6">
-                    Questi termini sono regolati dalla legge dello Stato della Florida, USA, con esclusione dei principi sul conflitto di leggi.
+                <h3 class="text-lg font-semibold text-[#92600a] mb-2">15.1 Intero Accordo</h3>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    I presenti Termini, insieme alla nostra <a href="/it/privacy" class="text-[#92600a] hover:underline">Informativa sulla Privacy</a>, costituiscono l'intero accordo tra te e RavencoreX LLC riguardo all'utilizzo dell'App.
                 </p>
+
+                <h3 class="text-lg font-semibold text-[#92600a] mb-2">15.2 Separabilità</h3>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    Se una qualsiasi disposizione dei presenti Termini viene ritenuta inapplicabile, le restanti disposizioni rimarranno pienamente in vigore ed efficaci.
+                </p>
+
+                <h3 class="text-lg font-semibold text-[#92600a] mb-2">15.3 Nessuna Rinuncia</h3>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    La nostra mancata applicazione di qualsiasi diritto o disposizione dei presenti Termini non costituirà una rinuncia a tale diritto o disposizione.
+                </p>
+
+                <h3 class="text-lg font-semibold text-[#92600a] mb-2">15.4 Cessione</h3>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    Non puoi cedere o trasferire i tuoi diritti ai sensi dei presenti Termini senza il nostro previo consenso scritto. Possiamo cedere i nostri diritti senza restrizioni.
+                </p>
+
+                <h3 class="text-lg font-semibold text-[#92600a] mb-2">15.5 Modifiche ai Presenti Termini</h3>
+                <p class="text-gray-600 leading-relaxed">
+                    Potremmo aggiornare i presenti Termini di tanto in tanto con un ragionevole preavviso. L'uso continuato dell'App dopo l'entrata in vigore delle modifiche costituisce accettazione dei Termini aggiornati.
+                </p>
+            </div>
+
+            <!-- Section 16: Contact Us -->
+            <div class="bg-white rounded-2xl border border-gray-200 p-8 mb-8 shadow-sm">
+                <h2 class="text-2xl font-bold text-gray-900 mb-4">16. Contattaci</h2>
 
                 <div class="bg-gray-50 rounded-xl p-4">
-                    <p class="text-gray-700 mb-4">
-                        <strong>Contatto legale:</strong>{" "}
+                    <p class="font-semibold text-gray-700 text-lg mb-2">RavencoreX LLC</p>
+                    <div class="text-gray-600 text-sm mb-3">
+                        <p>2 S Biscayne Boulevard, Suite 3200 #4821</p>
+                        <p>Miami, FL 33131, United States</p>
+                    </div>
+                    <p class="text-gray-700">
+                        <strong>Email:</strong>{" "}
                         <a href="mailto:legal@ravencorex.com" class="text-[#92600a] hover:underline">
                             legal@ravencorex.com
                         </a>
                     </p>
-                    <div class="text-gray-600 text-sm">
-                        <p class="font-semibold text-gray-700">RavencoreX LLC</p>
-                        <p>2 S Biscayne Boulevard Suite 3200 #4821</p>
-                        <p>Miami, FL 33131</p>
-                        <p>Stati Uniti</p>
-                    </div>
+                    <p class="text-gray-500 text-sm mt-2">Risponderemo entro 30 giorni.</p>
                 </div>
             </div>
 
             <!-- Footer -->
             <div class="text-center text-gray-500 text-sm pt-8 border-t border-gray-200">
-                <p>© 2025 RavencoreX LLC. Tutti i diritti riservati.</p>
+                <p>&copy; 2026 RavencoreX LLC. Tutti i diritti riservati.</p>
                 <p class="mt-2">
                     <a href="/it" class="text-[#92600a] hover:underline">Home</a>
-                    <span class="mx-2">•</span>
+                    <span class="mx-2">&bull;</span>
                     <a href="/support" class="text-[#92600a] hover:underline">Supporto</a>
-                    <span class="mx-2">•</span>
+                    <span class="mx-2">&bull;</span>
                     <a href="/it/privacy" class="text-[#92600a] hover:underline">Informativa sulla Privacy</a>
                 </p>
             </div>
